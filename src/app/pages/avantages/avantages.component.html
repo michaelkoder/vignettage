@@ -1,0 +1,147 @@
+<section id="section1" class="container-fluid p-0 mb-2 overflow-hidden">
+    <a href="./#/home" class="row avantagesBox1 overflow-hidden">
+        <div class="col-1 pl-md-5">
+            <i _ngcontent-vcb-c16="" class="fa fa-angle-left fa-1x"></i>
+        </div>
+        <div class="col-11 col-md-10  text-center pt-1 pl-0">
+           Mes coupons
+        </div>
+    </a>
+    <div class="row avantagesBox2 text-center pt-4 pb-4">
+        <div class="col-12 txt1">
+            Obtenez votre/vos produit(s) 
+            à prix réduit(s)
+        </div>
+        <div class="col-12 txt2 pt-2">
+            Récupérez votre produit en magasin et présentez votre Carte E.Leclerc en caisse, <br>
+            ou commandez votre produit sur www.leclercdrive.fr ou www.chezmoi.leclerc
+
+        </div>
+    </div>
+    <div class="container-fluid avantagesBox3 pt-4">
+        <div class="row">
+            <div class="col-12 text-left p-0 pl-4 ml-1 pl-md-5">
+                <h2>Mes coupons à utiliser</h2>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row productBox pt-4 pl-2 pr-2 pr-md-5 pl-md-5">
+        <div 
+        *ngFor="let product of avantagesProductsList"
+        class=" productItem mb-3 col-10 offset-1 col-md-4 offset-md-0 text-left">
+            <ul class="list-group shadow-none">
+                <li class="list-group-item text-center onlineInfoBox pt-3 pb-3 border-0">
+                    <div class="row">
+                        <div class="col-9 p-0 pl-2 text-left">
+                            <div>Disponible sur votre carte E.Leclerc </div>
+                            <b>à utiliser avant le {{ product['DateReservation'] | date:'dd/MM/YY'}}</b>
+                        </div>
+                        <div class="col-3 p-0 pl-1 overflow-hidden imgBox">
+                            <img src="assets/image/interfaces/Carte.svg" width="50"/>
+                        </div>
+                    </div>
+                    <div class="trouFond miniTrou trouLeftMini"> </div>
+                    <div class="trouFond miniTrou trouRightMini"> </div>
+                </li>
+                <li class="list-group-item itemBody ">
+                    <div class="row">
+                        <div class="col-12 pb-4 produtcTitle text-center">
+                            {{product.Libelle}}
+                        </div>
+                        <div class="col-6">
+                            <div class="circlePrice">
+                                <span class="price"> {{product.PrixOperation}}
+                                    <span class="euro">€</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 p-1">
+                            <img src="{{product.UrlPhoto}}" class="img-fluid"/>
+                            <div class="picturePrice text-right">Prix Public :  {{product.PrixPublic}} €</div>
+                        </div>
+                    </div>
+                    <div class="trouFond trouLeft"> </div>
+                    <div class="trouFond trouRight"> </div>
+                </li>
+                <li class="list-group-item onlineBtnBox">
+                    <div data-toggle="modal" data-target="#avantageConfirm" class="btn blueRed w-100 mt-2">Je supprime mon coupon</div>
+                    <div class="mt-4 text-center font-weight-light ">
+                        En supprimant ce coupon , vous récupérerez<br>
+                        vos vignettes et pouvez les réutiliser
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <div class="row avantagesBox3 pt-4">
+        <div class="col-10 offset-1 text-left p-0">
+            <h2>Mon historique</h2>
+        </div>
+    </div>
+    <div class="row productBox pt-4 pl-2 pr-2 pr-md-5 pl-md-5 pb-3">
+        <div *ngFor="let product of avantagesProductsList_used"
+     class="col-10 mb-4 offset-1 col-md-4 offset-md-0 text-left p-0 p-md-2">
+            <div class="avantageDate pb-2">
+                Coupon utilisé le {{product['DateUtilisation'] | date:'dd/MM/YYYY'}}
+            </div>
+            <ul class="list-group disabled shadow-none">
+                <li class="list-group-item productBoxBody2 ">
+                    <div class="row ">
+                        <div class="col-12 pb-4 produtcTitle text-center ">
+                            {{product['Libelle'] }}
+                        </div>
+                        <div class="col-6">
+                            <div class="circlePrice">
+                                <span class="price"> {{product['PrixOperation'] }}
+                                    <span class="euro">€</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 p-1">
+                            <img src="{{product['UrlPhoto']}}" class="img-fluid " />
+                            <div class="picturePrice text-right">Prix Public :  {{product['PrixPublic'] }}€</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="trouFond trouLeft"> </div>
+            <div class="trouFond trouRight"> </div>
+
+        </div>
+    </div>
+    
+
+
+    <div class="modal bottom fade" id="avantageConfirm" tabindex="-1" role="dialog" aria-labelledby="addProdutModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog w-100 m-0" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center border-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <h4 class="col-8 offset-2  text-center pt-4 pb-4">
+                    <div class="slideIconBox align-content-center  ">
+                        <div class="sliderIcon supprimer"></div>
+                    </div>
+                    <div class="mt-3">
+                        Êtes-vous sûr de vouloir supprimer votre avantage ?
+                    </div>
+                </h4>
+            </div>
+            <div class="modal-footer mb-4 border-0">
+                <div class="col-12 text-center">
+
+                    <button type="button" (click)='goHome()'
+                        class="btn btn-primary vignetteBtn" data-dismiss="modal">Je confirme</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>

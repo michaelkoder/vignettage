@@ -1,0 +1,512 @@
+@import "general.scss";
+@import "./assets/bootstrap-side-modals.css";
+
+
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
+
+main{
+    overflow: hidden;
+}
+body{
+ font-family: $generalFont1 !important;
+}
+.blueTxt{
+    color:$colorBlue
+}
+
+.warningIconBox{
+    background-color: $colorBlue;
+    border-radius: 40px;
+    height: 64px;
+    width: 64px;
+    display: inline-block;
+    .warningIcon{
+        mask-size: 5px;
+        mask-repeat: no-repeat;
+        mask-position: 29px;
+        background-color: #FFFFFF;
+        height: 64px;
+        width: 64px;
+        mask-image: url('./assets/image/interfaces/warning.svg');
+    }
+}
+a .fa-angle-left{
+    
+    border: 1px solid #FFF;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    text-align: center;
+    padding: 1px 4px 0 0;
+}
+
+a:hover{
+    text-decoration: none;
+}
+.iconBox1{
+
+    border-radius: 40px;
+    background-color: $colorBlue;
+    width: 50px;
+    height: 50px;
+
+    .iconBox{
+        mask-size: 24px;
+        mask-repeat: no-repeat;
+        mask-position: 13px 11px;
+        background-color: #FFFFFF;
+        height: 64px;
+        width: 64px; 
+        &.cadeau{
+            mask-image: url('./assets/image/interfaces/cadeau.svg');
+            
+        }
+    }
+}
+.vignetteBtn{
+
+    border-radius: 20px;
+    width: 100%;
+    background-color: $colorBlue;
+}
+
+.iconLighter{
+    -webkit-text-stroke: 2px white;
+}
+.iconLighter2{
+    -webkit-text-stroke: 3px white;
+}
+.text-ultraLight{
+    font-weight: 100;
+}
+a{
+    color:$colorRed;
+    &:hover{
+        color:$colorRed;
+    }
+}
+*:focus{
+    outline: 0;
+    box-shadow: initial !important;
+}
+
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    z-index: 100;
+    button{
+        background-color: $colorBlue;
+        border-radius: 20px;
+        height: 40px;
+        color: #FFFFFF;
+        width: 40px;
+        padding: 0;
+        &:hover{
+            color: #FFFFFF;
+        }
+    }
+   }
+.show-scrollTop {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
+
+
+
+
+.productBox{
+    background-color:$colorGrey; 
+    
+    .onlineInfoBox{
+        background-color: $colorBlueLight;
+        font-size: 14px;
+        b{
+            color: $colorBlue;
+            font-size: 16px;
+        }
+    }
+    .produtcTitle{
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .fa-plus{
+        font-size: 21px
+    }
+    .picturePrice{
+        color:$colorGreyMiddle;
+        font-size: 14px;
+        font-weight: 300;
+        padding: 6px 0 0 0;
+    }
+    .productDescription1{
+        color:$colorGreyMiddle;
+        font-size: 13px;
+    }
+    .list-group{
+        border-radius: 8px;
+        box-shadow: 0px 4px 12px rgba(0, 102, 204, 0.3);      
+        .list-group-item{
+            border:none;
+            border-bottom:1px solid rgba(0, 0, 0, 0.125);
+            
+            &:last-child{
+                border:none;
+            }
+            .footerProductTxt{
+                font-size: 14px;
+            }    
+            .footerProductTxt1{
+                font-size: 16px;
+                color: $colorBlue;
+            } 
+        }
+    }
+    .onlineBtnBox {
+        color: $colorGreyMiddle;
+        font-size: 14px;
+        .blueBtn{
+            border-radius: 53px;
+            background-color: $colorBlue;
+            color: #FFFFFF;
+            font-size: 16px;
+        }
+        .blueRed{
+            border-radius: 53px;
+            background-color: #FFFFFF;
+            border: 1px solid $colorRed;
+            color: $colorRed;
+        }
+    }
+
+
+    .circlePrice{
+        background-color: $colorBlue;
+        border-radius: 70px;
+        width: 116px;
+        color: #FFFFFF;
+        height: 116px;
+        padding: 0px 0 0 37px;
+        font-weight: 400;
+        float:right;
+        .price{
+            font-size: 55px;
+            width: 106px;
+            position: relative;
+            top: -2px;
+            left: -31px;
+            white-space: pre;
+            text-align: center;
+            letter-spacing: -5px;
+            display: inline-block;
+            .euro{
+                font-size: 28px;
+                margin: 0 0 0 0px;
+                letter-spacing: 0px;
+            }
+        }   
+        .infoBox1{
+            transform: rotate(-10deg);
+            background-color: $colorBlueLight;
+            color: $colorBlue;
+            font-weight: 500;
+            font-size: 13px;
+            margin: -14px 0 0 -20px;
+            border-radius: 6px;
+            padding: 2px;
+            display: block;
+            width: 90px;
+        }
+        
+    }   
+    .productSlider{
+        .round1{
+            width:32px;
+            height:32px;
+            background-color: $colorBlue;
+            border-radius: 60px;
+            color: #FFFFFF;
+            font-size: 16px;
+            display: inline-table;
+            text-align: center;
+            padding-top: 4px;
+            z-index: 10;
+            position:relative;
+        }
+        .backLine{
+            background-color: $colorGrey;
+            width: 304px;
+            height: 20px;
+            margin: 6px -12px 0 -10px;
+            z-index: 0;
+            border-radius: 10px;
+        }
+        .round2{
+            width:32px;
+            height:32px;
+            border-radius: 60px;
+            background-color: #FFFFFF;
+            border: 1px solid $colorBlue;
+            color: $colorBlue;
+            font-size: 16px;
+            display: inline-table;
+            text-align: center;
+            padding-top: 4px;
+            z-index: 10;
+        }
+    }    
+    
+    .productBoxOff{
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        h2{
+            font-size: 24px;
+            font-weight: 300;
+        }
+        h3{
+            font-size: 19px;
+        }
+        .lockIconBg{
+
+           
+            border-radius: 25px;
+            height:48px;
+            width: 48px;
+            background-color: $colorBlue;
+            margin: -10px auto 20px;
+
+            .lockIcon{
+                background-color: #FFFFFF;
+                margin: 30px auto;
+                height: 48px;
+                width: 48px;
+                -webkit-mask-image: url('./assets/image/interfaces/lock.svg');
+                -webkit-mask-size: 20px;
+                -webkit-mask-repeat: no-repeat;
+                -webkit-mask-position: 14px;
+                
+                mask-image: url('./assets/image/interfaces/lock.svg');
+                mask-size: 20px;
+                mask-repeat: no-repeat;
+                mask-position: 14px;
+                &.lockIcon_red{
+                    background-color: #ff0000;
+                }
+            }
+        }
+    }
+}
+
+.trouFond{
+    background-color: $colorGrey;
+    height: 30px;
+    width: 30px;
+    border-radius: 30px; 
+    position: absolute;
+    z-index: 90;
+    &.miniTrou{
+        height: 10px;
+        width: 10px;
+    }
+    &.trouLeftMini{
+        
+        bottom: -5px;
+        left: -5px;
+    }
+    &.trouRightMini{
+        
+        bottom: -5px;
+        right: -5px;
+    }
+    &.trouTop{
+        top: -5px;
+    }
+    &.trouLeft{
+        bottom: -15px;
+        left: -16px;
+    }
+    &.trouRight{
+        bottom: -16px;
+        right: -16px;
+    }
+}
+
+.modal-content {
+    .productBox{
+        background: none;
+        .circlePrice {
+            .price{
+                top: 13px;
+                left: 1px;
+            }
+        }
+    }
+    
+}
+
+#addProdutModal{
+    .modal-content{
+        border-radius: 6px;
+    }
+    .modal-footer, .modal-header {border:none;}
+    .productBox .circlePrice .price{
+        font-size: 60px;
+        top: 10px;
+        left: 3px;
+    }
+    h2{
+        font-size: 24px;
+        font-weight: 300;
+        text-align: center;
+        line-height: 31.68px;
+    }
+    h3{
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .txtBox {
+        b{
+            color: #868686;
+        }
+    }
+    .productBox{
+        background-color: #FFFFFF;
+        width: 80%;
+        margin: 6% 10%;
+        
+    }
+    .txtBox{
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+        color: $colorGreyMiddle;
+    }
+    .fa-plus{
+        font-weight: inherit;
+        transform: rotate(45deg);
+        color: #000000;
+        font-size: 30px;
+    }
+    .btn{
+        border-radius: 53px;
+        background-color: $colorBlue;
+    }
+}
+#addMultipleProdutsModal{
+    .modal-content{
+        border-radius: 6px;
+    }
+    .modal-footer, .modal-header {border:none;}
+    h2{
+        font-size: 24px;
+        font-weight: 300;
+        text-align: center;
+        line-height: 31.68px;
+         b{
+            color: $colorBlue;
+            font-weight: 300;
+        }
+    }
+    .modal-header .fa-plus{
+        font-weight: inherit;
+        transform: rotate(45deg);
+        color: #000000;
+        font-size: 30px;
+    }
+    .compteur i{
+        height: 40px;
+        width: 40px;
+        background-color: $colorBlue;
+        color: #FFFFFF;
+        border-radius: 53px;
+        padding: 12px 0 0 0;
+    }
+    .compteur i.disable{
+        background-color: $colorBlueLight;
+    }
+    .compteur .num{
+        
+        font-size: 30px;
+        padding: 3px 0 0 0;
+        font-weight: bold;
+        margin: -6px 0 -3px 0px;
+    }
+    button.btn{
+        border-radius: 53px;
+        background-color: $colorBlue;
+    }
+
+}
+
+
+.filtersModal{
+    .custom-control-label {
+        margin:0 0 0 10px;
+        padding: 5px 0 0 6px;
+    }
+    
+    .custom-control-label label{
+        margin:0 0 0 10px;
+    }
+    .custom-control-label::before {
+        left: -2.3rem;
+        top: 0px;
+        width: 2rem;
+        height: 2rem;
+        border: $colorBlue solid 1px;
+    }
+
+    .custom-control {
+        min-height: 3.2rem;
+        border-bottom: 1px solid #e2e2e2;
+        margin: 0 0 16px;
+    }
+    .custom-control-label::after{
+        top: 3px;
+        left: -34px;
+        background-size: 21px;
+        background-position: -3px;
+    }
+    .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+        background-image:none;
+        width: 26px;
+        height: 26px;
+        background-color: #027bff;
+        border-radius: 30px;
+        border: 2px solid #FFFFFF;
+    }
+
+}
+
+.modal.top .modal-dialog, .modal.bottom .modal-dialog {
+    margin: auto 5%;
+    width:90%;
+}
+
+
+@include media-breakpoint-up(sm) {
+
+    .modal.top .modal-dialog, .modal.bottom .modal-dialog {
+        margin: auto 30%;
+        width:40%;
+    }
+    .productBox{
+        .list-group-item.bodyItem{
+            min-height:270px;
+        }
+    }
+    #addProdutModal{
+        .productBox{
+            background-color: #FFFFFF;
+            width: 100%;
+            margin: 0;
+        }
+     }
+}

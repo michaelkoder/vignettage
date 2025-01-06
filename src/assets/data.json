@@ -1,0 +1,248 @@
+{
+	"DateDebut": "2020-12-01T10:00:00Z",
+	"DateFin": "2021-01-01T10:00:00Z",
+	"EstClientDigitalise": true,
+	"NbVignettesDisponibles": 100,
+	"NbCouponsReserves": 1,
+	"Coupons": [
+		{
+			"GuidCoupon": "640abd44-7efe-4c60-bd4b-9522b38341d1",
+			"EAN": "0000012345678",
+			"DateReservation": "2020-12-05T12:30:00Z",
+			"EstUtilise": false,
+			"DateUtilisation": null
+		},
+		{
+			"GuidCoupon": "59a25acd-a76e-438a-9eff-c5a8dd95d8aa",
+			"EAN": "0000087654321",
+			"DateReservation": "2020-12-03T15:30:00Z",
+			"EstUtilise": true,
+			"DateUtilisation": "2020-12-04T17:15:00Z"
+		},
+		{
+			"GuidCoupon": "640abd44-7efe-4c60-bd4b-9522b38341d1",
+			"EAN": "0000012345678",
+			"DateReservation": "2020-12-05T12:30:00Z",
+			"EstUtilise": true,
+			"DateUtilisation": "2020-11-04T17:15:00Z"
+		},
+		{
+			"GuidCoupon": "59a25acd-a76e-438a-9eff-c5a8dd95d8aa",
+			"EAN": "0000087654321",
+			"DateReservation": "2020-12-03T15:30:00Z",
+			"EstUtilise": false,
+			"DateUtilisation": null
+		}
+	],
+	"ProduitsARemporter": [
+		{
+			"EAN": "0000012345678",
+			"Libelle": "Lot 2 verres à vin blanc",
+			"EstDisponible": true,
+			"PrixPublic": "15,99",
+			"PrixOp": "1",
+			"NbVignettes": 40,
+			"Description": "Ces verres à vins blanc raffinés se caractérisent par leur grâce et leur élegance discrète. Ces verres de forme arrondie permettent un developpement  parfait des arômes délicats.",
+			"UrlPhoto": "assets/image/home/Verres2.png",
+			"NbReservationPossible": 1,
+			"NbReservationMax": 3
+		},
+		{
+			"EAN": "0000012345678",
+			"Libelle": "Lot 2 verres à vin blanc",
+			"EstDisponible": true,
+			"PrixPublic": "15,99",
+			"PrixOp": "1",
+			"NbVignettes": 40,
+			"Description": "Ces verres à vins blanc raffinés se caractérisent par leur grâce et leur élegance discrète. Ces verres de forme arrondie permettent un developpement  parfait des arômes délicats.",
+			"UrlPhoto": "assets/image/home/Verres2.png",
+			"NbReservationPossible": 1,
+			"NbReservationMax": 3
+		},
+		{
+			"EAN": "0000012345678",
+			"Libelle": "Lot 2 verres à vin blanc",
+			"EstDisponible": true,
+			"PrixPublic": "15,99",
+			"PrixOp": "1",
+			"NbVignettes": 70,
+			"Description": "Ces verres à vins blanc raffinés se caractérisent par leur grâce et leur élegance discrète. Ces verres de forme arrondie permettent un developpement  parfait des arômes délicats.",
+			"UrlPhoto": "assets/image/home/Verres2.png",
+			"NbReservationPossible": 1,
+			"NbReservationMax": 3
+		},
+		{
+			"EAN": "0000012345678",
+			"Libelle": "Lot 2 verres à vin blanc",
+			"EstDisponible": true,
+			"PrixPublic": "15,99",
+			"PrixOp": "1",
+			"NbVignettes": 40,
+			"Description": "Ces verres à vins blanc raffinés se caractérisent par leur grâce et leur élegance discrète. Ces verres de forme arrondie permettent un developpement  parfait des arômes délicats.",
+			"UrlPhoto": "assets/image/home/Verres2.png",
+			"NbReservationPossible": 1,
+			"NbReservationMax": 3
+		}
+	],
+	"ProduitsDeclencheursActuels": [
+		{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 1,
+			"Description": "Description du Produit déclencheur n°1",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		},
+		{
+			"Libelle": "Bonbons Dragolo Haribo assortiment boite ronde 750g",
+			"Rayon": 2,
+			"Description": "Bonbons Dragolo Haribo assortiment boite ronde 750g",
+			"UrlPhoto": "assets/image/products/product1.jpg"
+		},
+		{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 3,
+			"Description": "Description du Produit déclencheur n°3",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		},
+		{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 3,
+			"Description": "Description du Produit déclencheur n°4",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		},{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 1,
+			"Description": "Description du Produit déclencheur n°1",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		},
+		{
+			"Libelle": "Bonbons Dragolo Haribo assortiment boite ronde 750g",
+			"Rayon": 2,
+			"Description": "Bonbons Dragolo Haribo assortiment boite ronde 750g",
+			"UrlPhoto": "assets/image/products/product1.jpg"
+		},
+		{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 3,
+			"Description": "Description du Produit déclencheur n°3",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		},
+		{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 3,
+			"Description": "Description du Produit déclencheur n°4",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		},
+		{
+			"Libelle": "Bonbons Dragolo Haribo assortiment boite ronde 750g",
+			"Rayon": 2,
+			"Description": "Bonbons Dragolo Haribo assortiment boite ronde 750g",
+			"UrlPhoto": "assets/image/products/product1.jpg"
+		},
+		{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 3,
+			"Description": "Description du Produit déclencheur n°3",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		},
+		{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 3,
+			"Description": "Description du Produit déclencheur n°4",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		},{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 1,
+			"Description": "Description du Produit déclencheur n°1",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		},
+		{
+			"Libelle": "Bonbons Dragolo Haribo assortiment boite ronde 750g",
+			"Rayon": 2,
+			"Description": "Bonbons Dragolo Haribo assortiment boite ronde 750g",
+			"UrlPhoto": "assets/image/products/product1.jpg"
+		},
+		{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 3,
+			"Description": "Description du Produit déclencheur n°3",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		},
+		{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 3,
+			"Description": "Description du Produit déclencheur n°4",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		}
+	],
+	"ProduitsDeclencheursProchainement": [
+		{
+			"Libelle": "Bonbons Dragolo Haribo assortiment boite ronde 750g",
+			"Rayon": 2,
+			"Description": "Description du Produit déclencheur prochainement n°2",
+			"UrlPhoto": "assets/image/products/product1.jpg"
+		},
+		{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 1,
+			"Description": "Description du Produit déclencheur prochainement n°1",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		},
+		{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 3,
+			"Description": "Description du Produit déclencheur prochainement n°3",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		},
+		{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 3,
+			"Description": "Description du Produit déclencheur prochainement n°4",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		},{
+			"Libelle": "Bonbons Dragolo Haribo assortiment boite ronde 750g",
+			"Rayon": 2,
+			"Description": "Description du Produit déclencheur prochainement n°2",
+			"UrlPhoto": "assets/image/products/product1.jpg"
+		},
+		{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 1,
+			"Description": "Description du Produit déclencheur prochainement n°1",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		},
+		{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 3,
+			"Description": "Description du Produit déclencheur prochainement n°3",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		},
+		{
+			"Libelle": "Lot 2 verres à vin blanc",
+			"Rayon": 3,
+			"Description": "Description du Produit déclencheur prochainement n°4",
+			"UrlPhoto": "assets/image/home/Verres2.png"
+		}
+	],
+	"Rayons": [
+		{
+			"IdRayon": 1,
+			"Libelle": "Rayon n°1"
+		},
+		{
+			"IdRayon": 2,
+			"Libelle": "Rayon n°2"
+		},
+		{
+			"IdRayon": 3,
+			"Libelle": "Rayon n°3"
+		},
+		{
+			"IdRayon": 4,
+			"Libelle": "Rayon n°4"
+		},
+		{
+			"IdRayon": 5,
+			"Libelle": "Rayon n°5"
+		}
+	]
+}

@@ -1,0 +1,166 @@
+<section id="section1" class="container-fluid p-0 mb-2 overflow-hidden">
+    <a href="./#/home" class="row productBox1 overflow-hidden">
+        <div class="col-1 pl-md-5">
+            <i _ngcontent-vcb-c16="" class="fa fa-angle-left fa-1x"></i>
+        </div>
+        <div class="col-11 col-md-10 text-center pl-0">
+            Découvrez nos produits partenaires
+        </div>
+    </a>
+    <div class="row productBox2 text-center pt-4 pb-4">
+        <div class="col-12 txt1">
+            Collectionnez des vignettes 
+        </div>
+        <div class="col-12 txt2 pt-2 font-weight-light">
+            pour l'achat d'un produit partenaire signalé en 
+            magasin, sur www.leclercdrive.fr et sur 
+            www.chezmoi.leclerc
+        </div>
+    </div>
+    <div class="row productBox3 pt-4 pb-4 pl-3 pr-3 pl-md-5 pr-md-5">
+      <h2 class="col-12">
+        A partir du
+      </h2>
+      <div class="col-8 txt1 font-weight-light">
+        {{ appInfos['DetailOperation']['DateDebut'] | date:'dd/MM/YY'}} au {{appInfos['DetailOperation']['DateFin']  | date:'dd/MM/YY'}}
+        selon disponibilité en magasin
+      </div>
+      <div class="col-4 pl-2 text-md-right">
+          <div class="removeFilter" 
+          *ngIf="selectedFilterNow.length>0 " 
+          (click)="removeFilter('now')">
+            <i class="fa float-right fa-plus"></i>
+          </div>
+          <button 
+            class="btn" 
+            data-toggle="modal"
+            data-target="#filtresModal">
+              Filtrer <span>{{selectedFilterNow.length}}</span>
+          </button>
+      </div>
+    </div>
+    <div class="row productsList pb-4 pl-3 pr-0 pr-md-5 pl-md-5">
+        <div 
+          *ngFor="let product of actualProducts; index as i" 
+          class="col-5 productBox ml-3 ml-md-0 mb-3 col-md-2">
+            <div class="productBoxB text-center">
+              <img src="{{product.UrlPhoto}}" class="img-fluid pt-3"/>
+              <div class="txt pt-2 pb-4"> {{product.Libelle}}</div>
+            </div>
+          </div>
+
+        <div class="row col-12 ">
+          <button 
+          *ngIf="limitList1<=actualProducts.length"
+          (click)="seeMore('present')" class="btn col-10 offset-1 offset-md-4 col-md-4 seeMoreBtn">
+            Voir plus 
+           </button>
+        </div>
+    </div>
+    <div class="row productBox3 pt-4 pb-4 pl-3 pr-3 pl-md-5 pr-md-5">
+        <h2 class="col-12">
+          A partir du 
+        </h2>
+        <div class="col-8 txt1 font-weight-light">
+          {{ appInfos['DetailOperation']['DateDebut'] | date:'dd/MM/YY'}} au {{appInfos['DetailOperation']['DateDebut'] | date:'dd/MM/YY'}}
+          selon disponibilité en magasin
+        </div>
+        <div class="col-4 pl-2 text-md-right">
+          <div 
+          class="removeFilter" 
+          *ngIf="selectedFilterHistory.length>0" 
+          (click)="removeFilter('history')"
+          >
+            <i class="fa float-right fa-plus"></i>
+          </div>
+            <button 
+            data-toggle="modal" 
+            data-target="#filtresModalHistory"
+             class="btn">
+                Filtrer <span>{{selectedFilterHistory.length}}</span>
+            </button>
+        </div>
+      </div>
+      <div class="row productsList pb-4 pl-3 pr-0 pr-md-5 pl-md-5">
+          <div 
+          *ngFor="let product of futureProducts; index as i" 
+          class="col-5 productBox ml-3 ml-md-0 mb-3 col-md-2">
+             <div class="productBoxB disabled text-center">
+                <img src="{{product.UrlPhoto}}" class="img-fluid pt-3"/>
+                <div class="txt pt-2 pb-4"> {{product.Libelle}}</div>
+            </div>
+          </div>
+          <div class="row col-12 ">
+            <button 
+            *ngIf="limitList2<=futureProducts.length"
+            (click)="seeMore('futures')" class="btn col-10 offset-1 offset-md-4 col-md-4 seeMoreBtn">
+              Voir plus 
+             </button>
+          </div>
+      </div>
+</section>
+
+<div class="modal fade filtersModal" id="filtresModal" tabindex="-1" role="dialog" aria-labelledby="filtresModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center border-0">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h2 class="modal-title w-100 font-weight-light text-center" id="filtresModalLabel">Filtrer par rayons</h2>
+            <br>
+            <ul class="col-12 p-0">
+                <li 
+                *ngFor="let filter of filterProducts"
+                class="custom-control custom-radio">
+                        <input type="checkbox" (click)="addFilter(filter['IdRayon'],'now')" class="custom-control-input" id="{{filter['IdRayon']}}" name="radio{{['IdRayon']}}">
+                        <label class="custom-control-label" for="{{filter['IdRayon']}}">{{filter['Libelle']}}</label>
+                </li>
+            </ul>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" 
+          data-dismiss="modal"
+          (click)='filterProductsList("now")' 
+         [disabled]='selectedFilterNow.length==0' 
+          class="btn btn-primary col-12">Je valide</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+<div class="modal fade filtersModal" id="filtresModalHistory" tabindex="-1" role="dialog" aria-labelledby="filtres2ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center border-0">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h2 class="modal-title w-100 font-weight-light text-center" id="filtres2ModalLabel">Filtrer par rayons</h2>
+            <br>
+            <ul class="col-12 p-0">
+                <li 
+                *ngFor="let filter2 of filterProducts"
+                class="custom-control custom-radio">
+                        <input type="checkbox" (click)="addFilter(filter2['IdRayon'],'history')" class="custom-control-input" id="A{{filter2['IdRayon']}}" name="radio2{{['IdRayon']}}">
+                        <label class="custom-control-label" for="A{{filter2['IdRayon']}}">{{filter2['Libelle']}}</label>
+                </li>
+            </ul>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" 
+          data-dismiss="modal"
+          (click)='filterProductsList("history")' 
+         [disabled]='selectedFilterHistory.length==0' 
+          class="btn btn-primary col-12">Je valide</button>
+        </div>
+      </div>
+    </div>
+  </div>

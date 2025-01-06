@@ -1,0 +1,167 @@
+@import '../../../general.scss';
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
+$borderColor:#E6F0FA;
+
+#section1{
+    background-color: $colorGreyLight;
+    height: unset;
+    .faqBox1{
+        background-color:$colorBlue;
+        color:#FFFFFF;
+        font-weight: lighter;
+        font-size: 24px;
+        border-radius: 69%;
+        margin: -24px 0 0 -35vw !important;
+        padding: 36px 35vw 20px;
+        width: 170vw;
+        z-index: 60;
+        display: inline-flex;
+        .fa{
+            font-size: 34px;
+        }
+    }
+    .searchBar{
+        .input-group-append{
+            position: absolute;
+            right: 10px;
+            top: 3px;
+        }
+        input{
+            width: 100%;
+            padding: 22px;
+            border: 1px solid $borderColor;
+            border-radius: 4px;
+            color: $colorGreyMiddle;
+            font-weight: 300;
+        }
+        button{
+            border-radius: 30px;
+            height: 35px;
+            width: 35px;
+            padding: 5px;
+            margin: 3px 0 0 0;
+            z-index: 100;
+        }
+    }
+    .faqBox2{
+        h2{
+            font-size: 24px;
+            button{
+                text-decoration: none;
+                color: $colorBlue;
+                font-weight: 300;
+                .questionTxt{
+                    width: 90%;
+                    text-align: left;
+                }
+                .btnBox{
+                    width: 10%;
+                    display: flex;
+                    i{
+                        font-size: 21px;
+                        position: relative;
+                        right: -20px;
+                        &.fa-minus{
+                            right: -5px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .card{
+            margin: 10px 0px;
+            border-radius: 8px;
+            border:1px solid $borderColor;
+            &.blueBg{
+                background-color: $colorBlue;
+                #headingOne{
+                    background: $colorBlue;
+                    button{
+                        color: #FFFFFF;
+                        i{
+                            -webkit-text-stroke: 0px white;
+                        }
+                    }
+                }
+            }
+            .card-header{
+                background-color: #FFFFFF;
+                border:none;
+            }
+            .card-body{
+                text-align: left;
+                font-size: 14px;
+                color: #FFFFFF;
+                font-weight: 100;
+            }
+            button{
+                margin: 0 0 0 -11px;
+                width: 100%;
+                i.fa-minus{
+                    opacity:1;
+                }  
+                i.fa-plus{
+                    opacity:0;
+                }  
+                &.collapsed{
+                  i.fa-minus{
+                    opacity:0 !important ;
+                  }  
+                  i.fa-plus{
+                    opacity: 1 !important ;
+                    }  
+                }
+            }
+        }
+        &.faqBox3{
+            background-color: #FFFFFF;
+            .card{
+                border: none;
+                border-bottom: 1px solid $colorGreyLight;
+            }
+            h2{
+                button{
+                    color: $colorBlack;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+
+
+
+@include media-breakpoint-up(sm) {
+    #section1{
+        height: 100vh;
+        .faqBox2{
+            .card{
+                float:left;
+                width: 45%;
+                margin: 2%;
+            }
+        }
+        .faqBox3{
+            .card{
+                float:none;
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+    .searchBar{
+        background: #FFFFFF;
+        position: relative;
+        top: -24px;
+        left: -5px;
+        margin: 0 0 -30px 0;
+        input{
+            background: $colorGreyLight;
+        }
+    }
+}

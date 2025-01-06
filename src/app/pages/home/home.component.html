@@ -1,0 +1,778 @@
+<section id="section1" class="container-fluid p-0 mb-2 overflow-hidden">
+    <div class="row sectionBox1">
+        <div class="col-12 col-sm-6 col-md-8 homeParentBox1">
+            <div class="row homeTextBox2 d-inline-flex overflow-hidden">
+                <div class="col-6 text-center imgBox">
+                    <img src="assets/image/home/homeLogoMarque.jpg" width="50%" class="img-fluid pt-3" />
+                </div>
+                <div class="col-5 text-center imgBox p-0 mt-n4 mt-md-n5 mb-n1">
+                    <img src="assets/image/home/homeVisuelTop.jpg" width="580" class="img-fluid mt-2 mt-md-4" />
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 homeParentBox2">
+            <div class="row homeTextBox3">
+                <div class="col-12 text-center pt-5">
+                    <h1 *ngIf="stateApp['operation']=='coming' || stateApp['operation']=='open'" class="pt-2">
+                        {{appInfos['NomMarque']}}
+                    </h1>
+                    <h1 *ngIf="stateApp['operation']=='closed'" style=" line-height: 36px; "
+                        class="pt-4 p-md-0 m-md-0 ">
+                        L'Opération {{appInfos['NomMarque']}}<br> se termine bientôt !</h1>
+                    <h2 *ngIf="stateApp['operation']!='closed'" class="pl-3 pr-3 mb-2 mt-n2">
+                        {{appInfos['DetailOperation']['Description']}}
+                    </h2>
+                    <div *ngIf="stateApp['operation']=='open'"
+                        [style.display]="(stateApp['onlineUser']==true && stateApp['userDigital']==true && stateApp['operation']=='open') ? 'none' : 'block'"
+                        class="pl-3 pr-3 mb-3 mt-n2 text-center text ">
+                        Collectionnez des vignettes et profitez d'une<br>
+                        large sélection de produits de la gamme {{appInfos['NomMarque']}}<br>
+                        à prix réduits
+                    </div>
+                    <a [style.display]="(stateApp['onlineUser']==true && stateApp['userDigital']==true && stateApp['operation']=='open') || stateApp['operation']=='coming'? 'block' : 'none'"
+                        href="#" class="pt-3 pb-3 p-md-0">
+                        du {{ datesOperation['debut'] | date:'dd/MM/YY'}} au {{datesOperation['fin'] |
+                        date:'dd/MM/YY'}}<br>
+                    </a>
+
+
+                    <div *ngIf="stateApp['operation']=='closed'"
+                        class="pl-3 pr-3 mb-2 mt-3 m-md-0 text-bold text-center text ">
+                        <b>Plus que</b>
+                    </div>
+
+
+                    <div *ngIf="stateApp['operation']=='coming' || stateApp['operation']=='closed'" id="compteur"
+                        class="row ml-n4">
+
+
+                        <div class="col-4 p-0">
+                            <div class="times">
+                                <div class="numberBox">
+                                    <span>{{decompteDate[0]}}</span>
+                                    <div class="numberBoxBg"></div>
+                                </div>
+                                <div class="numberBox">
+                                    <span>{{decompteDate[1]}}</span>
+                                    <div class="numberBoxBg"></div>
+                                </div>
+                                <div class="points">:</div>
+                            </div>
+                            <div class="labels">
+                                jours
+                            </div>
+                        </div>
+
+                        <div class="col-4 p-0">
+                            <div class="times">
+                                <div class="numberBox">
+                                    <span>{{decompteDate[2]}}</span>
+                                    <div class="numberBoxBg"></div>
+                                </div>
+                                <div class="numberBox">
+                                    <span>{{decompteDate[3]}}</span>
+                                    <div class="numberBoxBg"></div>
+                                </div>
+                                <div class="points">:</div>
+                            </div>
+                            <div class="labels">
+                                heures
+                            </div>
+                        </div>
+                        <div class="col-4 p-0">
+                            <div class="times">
+                                <div class="numberBox">
+                                    <span>{{decompteDate[4]}}</span>
+                                    <div class="numberBoxBg"></div>
+                                </div>
+                                <div class="numberBox">
+                                    <span>{{decompteDate[5]}}</span>
+                                    <div class="numberBoxBg"></div>
+                                </div>
+                            </div>
+                            <div class="labels">
+                                minutes
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="stateApp['operation']=='closed'"
+                        class="pl-3 pr-3 mb-2 mt-3 text-center text mt-md-1 mb-md-1">
+                        pour utiliser vos vignettes et obtenir votre/vos produit(s) {{appInfos['NomMarque']}} à prix
+                        réduit(s) grâce à votre Carte E.Leclerc
+                    </div>
+
+                    <div *ngIf="stateApp['operation']=='closed'" class="endOperationMessageBox">
+                        <div class="lockIconBox text-center">
+                            <div class="lockIcon lockIcon_red text-center"></div>
+                        </div>
+                        <div class="textBox">
+                            Vous n'avez plus la possibilité <br>
+                            de collectionner de vignettes
+                        </div>
+                    </div>
+
+                    <a href="./#/allproducts"
+                        *ngIf="(stateApp['operation']=='coming' || stateApp['operation']=='open' ) && (stateApp['userDigital'] == false || stateApp['onlineUser'] == false )"
+                        class="btn btn-light m-0 mt-2 mb-2 col-10 offset-1 seeProducts">
+                        Voir les produits
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="desktopStyle">
+
+</section>
+<div id="sectionA">
+
+    <section id="section2" class="container col-12 col-md-4 p-0 overflow-hidden">
+        <div class="row homeBox2 mt-5 pt-3">
+            <div *ngIf="stateApp['operation']!='closed'" class="col-10 offset-1 p-0 pt-3 pb-3">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        {{appInfos['NbVignettesAchat']}} vignette tous les 10€ d’achat
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <a href="./#/products" class="col-11 p-1 pl-3">
+                                <b>
+                                    Collectionnez
+                                    <span class="plusDeBox">
+                                        PLUS DE
+                                    </span>
+                                    vignettes
+                                </b>
+                                <br>
+                                <span class="pt-3">
+                                    avec nos produits partenaires
+                                </span>
+                            </a>
+                            <div class="col-1 p-0 pt-3">
+                                <i class="fa fa-angle-right fa-2x"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div *ngIf="stateApp['onlineUser'] == false && (stateApp['operation']=='coming' || stateApp['operation']=='open')"
+            class="row loginBox_out pt-3 pb-1">
+            <div class="col-10 offset-1 loginBox_in text-center p-3">
+                <div class="mt-2">
+                    <img src="assets/image/interfaces/user.svg" />
+                </div>
+                <div class="mt-3 identTxt">
+                    Connectez-vous dans l’espace<br>
+                    Carte ou créez votre<br> Carte E.Leclerc
+                </div>
+                <button (click)="stateApp['onlineUser']=true"
+                    onclick="VignettageJSBridge.DemandeFermetureMobile();window.webkit.messageHandlers.VignettageJSBridge.postMessage('DemandeFermetureMobile');"
+                    class="btn btn-light mt-3 mb-2">
+                    Je m'identifie
+                </button>
+            </div>
+        </div>
+
+
+        <div *ngIf="stateApp['onlineUser'] == true && stateApp['operation']=='open' && stateApp['userDigital']==false"
+            class="row loginBox_out pt-3 pb-3">
+            <div class="col-10 offset-1 loginBox_in text-center p-3">
+                <div class="mt-2">
+                    <img class="vignetteImg p-0" src="assets/image/interfaces/demat.svg" />
+                </div>
+                <div class="mt-3 identTxt">
+                    Participer à l'opération <br />
+                    dématérialisée ?
+                </div>
+                <button data-toggle="modal" data-target="#digitalisationModal" class="btn btn-light mt-3 mb-2">
+                    Je choisis le mode dématérialisé
+                </button>
+            </div>
+            <div class="col-10 offset-1 footer text-left p-1 pt-3 pb-1 d-md-none ">
+                Vous collectionnez actuellement des vignettes papier
+            </div>
+        </div>
+
+        <a href="./#/avantages" id="vignettesNbrIndicator"
+            *ngIf="stateApp['onlineUser'] == true && stateApp['userDigital']==true && stateApp['operation'] =='coming'"
+            class="row  pt-3 pb-4">
+            <div class="col-10 offset-1 text-center p-3 contentBox">
+                <div class="textBox">
+                    Vous avez <span class="vignettesNbr">{{stateApp['userVignettes']}} </span> vignette<span
+                        *ngIf="stateApp['userVignettes']>1">s</span>
+                </div>
+            </div>
+        </a>
+
+        <div *ngIf="stateApp['onlineUser']==true && stateApp['operation']=='coming' && stateApp['userDigital']==false"
+            class="row loginBox_out pt-3 pb-3">
+            <div class="col-10 offset-1 loginBox_in text-center p-3">
+                <div class="mt-2">
+                    <img class="vignetteImg" src="assets/image/interfaces/vignettesGroup.svg" />
+                </div>
+                <div class="mt-3 identTxt">
+                    Collectionnez vos vignettes
+                </div>
+                <div class="mt-1 text-ultraLight">
+                    en choisissant le mode <br>de participation dématérialisée
+                </div>
+                <button data-toggle="modal" data-target="#digitalisationModal" class="btn btn-light mt-3 mb-2">
+                    Je participe
+                </button>
+            </div>
+        </div>
+        <div class="row logedInBox_out pt-2 mb-4"
+            *ngIf="(stateApp['operation']=='open' || stateApp['operation']=='closed') && stateApp['userDigital']==true && stateApp['onlineUser']==true ">
+
+            <div class="col-10 offset-1 logedInBox_in text-center p-3">
+                <div class="txtBox1">
+                    <span> Vous avez </span>
+                    <span class="number"> {{stateApp['userVignettes']}} </span>
+                    <span> vignette<span *ngIf="stateApp['userVignettes']>1">s</span> </span>
+                </div>
+                <div class="whiteBordered container mt-3" *ngIf="nbrCoupons>0">
+                    <a href="./#/avantages" class="row text-light">
+                        <div class="col-11 p-3 pr-0 text-left font-weight-light">
+                            <b class="font-weight-bold">Vous avez {{nbrCoupons}} coupon<span
+                                    *ngIf="nbrCoupons>1">s</span> disponible<span *ngIf="nbrCoupons>1">s</span> </b><br>
+                            sur votre carte E.Leclerc
+                        </div>
+                        <div class="col-1 p-0 pt-4 pr-2">
+                            <i class="fa fa-angle-right fa-2x"></i>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section3" class="container col-12 col-md-8 p-0 overflow-hidden">
+        <div class="row homeBox4 pt-3 pb-3 pl-2 pr-2 p-md-0">
+
+            <div class="col-12 footer text-left p-3 d-none d-md-block ml-md-2 ">
+                Vous collectionnez actuellement des vignettes papier
+            </div>
+            <div [style.display]="(stateApp['operation']=='open' && stateApp['userDigital']==false) ? 'none' : 'block'"
+                class="col-10 text-left pl-md-4 pl-4 pr-4 ml-3">
+                <h2>{{appInfos['DetailOperation']['TitreBloc']}}</h2>
+                <div class="txtBox">
+                    {{appInfos['DetailOperation']['TexteBloc']}}
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf=" (stateApp['userDigital']==false|| stateApp['onlineUser']==false )">
+            <div class="row sliderBox d-md-none pt-2 pl-2 pr-2 p-md-0">
+                <h2 class="col-10 m-2">Collectionnez vos vignettes sur votre Carte E.Leclerc</h2>
+                <div id="vignettesBoxSlider" data-interval="false"
+                    class="carousel slide col-10 offset-1 col-md-12 offset-md-0 p-0 pt-md-4 pb-5" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#vignettesBoxSlider" data-slide-to="0" class="active"></li>
+                        <li data-target="#vignettesBoxSlider" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item text-center active">
+                            <div class="slideIconBox align-content-center ">
+                                <div class="sliderIcon cadeau"></div>
+                            </div>
+                            <h3 class="mt-2">{{appInfos['NbVignettesBasculeDigital']}} vignettes offertes</h3>
+                            <div class="txt">
+                                en choisissant de collectionner<br>
+                                vos vignettes sur votre Carte E.Leclerc
+                            </div>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <div class="slideIconBox align-content-center ">
+                                <div class="sliderIcon cumulVignettes"></div>
+                            </div>
+                            <h3 class="mt-2">Cumuler des vignettes</h3>
+                            <div class="txt">
+                                sur tous les supports E.Leclerc
+                            </div>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <div class="slideIconBox align-content-center ">
+                                <div class="sliderIcon cadeau"></div>
+                            </div>
+                            <h3 class="mt-2">2 vignettes offertes</h3>
+                            <div class="txt">
+                                en choisissant de collectionner<br>
+                                vos vignettes sur votre Carte E.Leclerc
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row sliderBox d-none d-md-block pt-2">
+                <h2 class="col-12 m-2">Collectionnez vos vignettes sur votre Carte E.Leclerc</h2>
+                <div id="vignettesBoxSlider2" data-interval="false"
+                    class="carousel slide col-10 offset-1 col-md-12 offset-md-0 p-0 pt-md-4" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#vignettesBoxSlider2" data-slide-to="0" class="active"></li>
+                        <li data-target="#vignettesBoxSlider2" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item text-center active">
+                            <div class="row">
+                                <div class="col carousel-item-box">
+                                    <div class="slideIconBox align-content-center ">
+                                        <div class="sliderIcon cadeau"></div>
+                                    </div>
+                                    <h3 class="mt-2">2 vignettes offertes</h3>
+                                    <div class="txt">
+                                        en choisissant de collectionner<br>
+                                        vos vignettes sur votre Carte E.Leclerc
+                                    </div>
+                                </div>
+                                <div class="col carousel-item-box">
+                                    <div class="slideIconBox align-content-center ">
+                                        <div class="sliderIcon cumulVignettes"></div>
+                                    </div>
+                                    <h3 class="mt-2">Cumuler des vignettes</h3>
+                                    <div class="txt">
+                                        sur tous les supports E.Leclerc
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item text-center">
+                            <div class="row">
+                                <div class="col carousel-item-box">
+                                    <div class="slideIconBox align-content-center ">
+                                        <div class="sliderIcon cadeau"></div>
+                                    </div>
+                                    <h3 class="mt-2">2 vignettes offertes</h3>
+                                    <div class="txt">
+                                        en choisissant de collectionner<br>
+                                        vos vignettes sur votre Carte E.Leclerc
+                                    </div>
+                                </div>
+                                <div class="col carousel-item-box">
+                                    <div class="slideIconBox align-content-center ">
+                                        <div class="sliderIcon cadeau"></div>
+                                    </div>
+                                    <h3 class="mt-2">2 vignettes offertes</h3>
+                                    <div class="txt">
+                                        en choisissant de collectionner<br>
+                                        vos vignettes sur votre Carte E.Leclerc
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#vignettesBoxSlider2" role="button" data-slide="prev">
+
+                        <i class="fa fa-angle-left fa-2x"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#vignettesBoxSlider2" role="button" data-slide="next">
+
+                        <i class="fa fa-angle-right fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div *ngIf="stateApp['onlineUser']==true && stateApp['userDigital']==true" class="row productBox">
+            <div *ngFor="let product of appInfos['ProduitsOperation']; index as i"
+                class="col-10 offset-1 col-md-5 text-left p-0 pb-4 productBoxItem">
+                <ul class="list-group"
+                    *ngIf="(stateApp['operation']=='closed' && product['NbVignettes'] <= stateApp['userVignettes']) || stateApp['operation']!='closed' ">
+                    <li *ngIf="stateApp['operation']!='coming' && stateApp['onlineUser']== true && stateApp['userDigital']==true && product['NbVignettes'] <= stateApp['userVignettes']"
+                        class="list-group-item text-center onlineInfoBox pt-3 pb-3 border-0">
+                        <b>Vous avez {{stateApp['userVignettes']}} vignette<span
+                                *ngIf="stateApp['userVignettes']>1">s</span> !</b>
+                        <div>vous pouvez obtenir le produit suivant :</div>
+                    </li>
+                    <li class="list-group-item bodyItem ">
+                        <div class="row">
+                            <div class="col-12 pb-4 produtcTitle text-center">
+                                {{product.Libelle}}
+                            </div>
+                            <div class="col-6">
+                                <div class="circlePrice">
+                                    <span class="price">{{product.PrixOperation}}
+                                        <span class="euro">€</span>
+                                    </span>
+                                    <span class="infoBox1">+ {{product.NbVignettes}} vignettes</span>
+                                </div>
+                            </div>
+                            <div class="col-6 p-1">
+                                <img src="{{product.UrlPhoto}}" class="img-fluid " />
+                                <div *ngIf="product.PrixPublic && product.PrixPublic!=''"
+                                    class="picturePrice text-right">Prix Public : {{product.PrixPublic}}€</div>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="list-group-item" *ngIf="product.Description!=''">
+                        <span>Description</span>
+                        <i (click)="vignettesService.showDescription($event)"
+                            class="fa fa-plus float-right iconLighter"></i>
+                        <div style="display: none;" class="productDescription1 font-weight-light pt-2 pb-2">
+                            {{product.Description}}
+                            <div class="productCaracteristiques mt-2">
+                                <ul class="list-unstyled">
+                                    <li *ngFor="let caract of product.Caracteristiques">
+                                        - {{caract}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li *ngIf="stateApp['onlineUser']==true " class="list-group-item onlineBtnBox">
+
+                        <div *ngIf="product['NbVignettes'] > stateApp['userVignettes']" class="sliderVignettes">
+                            <div class="productSlider d-flex mt-3">
+                                <div class="round1"
+                                    [ngStyle]="{'left': calculPourc(stateApp['userVignettes'],product['NbVignettes'])+'%'}">
+                                    {{stateApp['userVignettes']}}
+                                </div>
+                                <div class="backLine"></div>
+                                <div class="round2">{{product['NbVignettes']}}</div>
+                            </div>
+                            <div class="text-center footerProductTxt footerProductTxt1 mt-3">
+                                Vous avez {{stateApp['userVignettes']}} vignette<span
+                                    *ngIf="stateApp['userVignettes']>1">s</span>
+                            </div>
+                            <div class="text-center footerProductTxt">
+                                Plus que {{product['NbVignettes'] - stateApp['userVignettes']}} vignette<span
+                                    *ngIf="(product['NbVignettes'] - stateApp['userVignettes'])>1">s</span> pour
+                                débloquer
+                                <br>
+                                le produit
+                            </div>
+                        </div>
+
+                        <div class="profiterBtns"
+                            *ngIf="product['NbVignettes'] <= stateApp['userVignettes'] && stateApp['operation'] !='coming'">
+
+                            <button *ngIf="nbrProductDetector(product['NbVignettes'])>1" class="btn blueBtn w-100 mt-2"
+                                data-toggle="modal" data-target="#addMultipleProdutsModal"
+                                (click)="selectProduct(product['NbVignettes'],product)">
+                                J'en profite
+                            </button>
+
+                            <button *ngIf="nbrProductDetector(product['NbVignettes'])<=1" class="btn blueBtn w-100 mt-2"
+                                data-toggle="modal" data-target="#addProdutModal"
+                                (click)="selectProduct(product['NbVignettes'],product)">
+                                J'en profite
+                            </button>
+                        </div>
+
+                        <div class="mt-4 text-center font-weight-light ">
+                            Vous pouvez obtenir ce produit à prix réduit en <br>
+                            téléchargeant votre coupon sur votre carte de <br>
+                            fidélité.
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div *ngIf="stateApp['operation']=='closed'" class="row productBox pb-4">
+            <div class="col-10 offset-1 text-center p-0 productBoxOff">
+                <div class="lockIconBg text-center">
+                    <div class="lockIcon text-center">
+                    </div>
+                </div>
+                <h2>
+                    Vous ne pouvez plus <br>
+                    obtenir ce produit
+                </h2>
+                <h3 class="pt-2">
+                    <b>Lot de 2 verres à eau ou à whisky</b>
+                </h3>
+                <img src="assets/image/home/verresRonds.jpg" class="img-fluid" width="160" />
+            </div>
+        </div>
+    </section>
+
+</div>
+<section id="section4" class="container col-12 p-0">
+    <div *ngIf="stateApp['onlineUser'] == false || stateApp['userDigital']==false"
+        class="row howItWork pt-2 d-md-inline-block">
+        <div class="col-10 offset-1 row p-0">
+            <h2 class="mt-4 col-12">Comment ça marche ?</h2>
+            <div class="p-0 howItWorkBlock block1 mt-5 mb-4">
+                <div class="number text-center">
+                    1
+                </div>
+                <div class="text text-center">
+                    Etre porteur d'une <br>
+                    <b>Carte E.Leclerc</b>
+                </div>
+            </div>
+            <div class="p-0 howItWorkBlock block2 mt-5 mb-4">
+                <div class="number text-center">
+                    2
+                </div>
+                <div class="text text-center">
+                    <b>Choisir l'opération</b><br>
+                    dématérialisée
+                </div>
+            </div>
+            <div class="p-0 howItWorkBlock block3 mt-4 mb-4">
+                <div class="number text-center">
+                    3
+                </div>
+                <div class="text text-center">
+                    <b>Cumuler des vignettes</b><br>
+                    1 vignette tous les 10€ d’achats<br>
+                    1 vignette pour tout achat d’un produit partenaire
+                </div>
+            </div>
+            <div class="p-0 howItWorkBlock block1 block4 mt-4 mb-4">
+                <div class="number text-center">
+                    4
+                </div>
+                <div class="text text-center mt-4 mt-md-1">
+                    <b>
+                        Sélectionner
+                        le ou les produits
+                    </b><br>
+                    de votre choix sur
+                    votre collecteur
+                </div>
+            </div>
+            <div class="p-0 howItWorkBlock block2 block5 mt-4 mb-4">
+                <div class="number text-center">
+                    5
+                </div>
+                <div class="text text-center">
+                    <b>
+                        Acheter les produits
+                        sélectionnés
+                        à prix réduits
+                    </b><br>
+                    en magasin sur
+                    présentation de votre
+                    Carte E.Leclerc, ou sur
+                    les sites participants*
+                </div>
+            </div>
+
+            <div class="text-light text-left footer pb-3">
+                *Offre valable dans la limite des stocks disponibles et dans les magasins, Drive & E.Leclerc Chez Moi
+                participants.
+            </div>
+        </div>
+    </div>
+
+    <div class="row markeVivo pt-2 pt-md-4">
+        <div class="col-10 offset-1 p-0 markeVivoBox">
+            <div class="row">
+                <img class="mt-4 col-12 col-md-6 mt-md-0 ml-md-n3 " src="assets/image/home/VisuelContent1.jpg" />
+                <div class=" mt-4 col-12 col-md-6 mt-md-0">
+                    <h2 class="mt-4 col-12"> {{appInfos['TitrePresentationMarque']}}</h2>
+                    <div class="text col-12 mt-2 font-weight-light">
+                        {{appInfos['TextePresentationMarque']}}
+                    </div>
+                    <img class=" col-12 visuelMark1" src="assets/image/home/VisuelContent2.jpg" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row pt-2 pt-md-4 pb-md-5">
+        <div class="col-10 offset-1 p-0 linksBox d-list d-md-flex">
+            <div class="col-12 col-md-6 m-0 p-0 ml-md-n5 mr-md-3">
+                <a href="./#/pointsVente" class="linkItem">
+                    <div class="col-10 pl-3 pr-0">
+                        Liste des points de vente participants
+                    </div>
+                    <div class="col-2 text-right">
+                        <i class="fa fa-angle-right fa-2x"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 m-0 p-0">
+                <a href="./#/faq" class=" linkItem">
+                    <div class="col-10 pl-3 pr-0">
+                        Des questions ? Consultez notre FAQ
+                    </div>
+                    <div class="col-2 text-right">
+                        <i class="fa fa-angle-right fa-2x"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<div id="options" class="container-fluid" style="position: relative; bottom: 0px; z-index:100000;">
+    <div class="row">
+        <div class="col-6 d-block">
+            <button (click)="optionSwitch()" class="btn btn-secondary">ON/OFF</button>
+            <div class="bg-light" *ngIf="switchOption==true">
+                <button (click)="onlineUserChange()">UserONLINE </button> {{stateApp['onlineUser']}}<br>
+                <button (click)="userDititalMode()">Digitalisé </button>{{stateApp['userDigital']}}<br>
+                <button (click)="stateApp['userVignettes']=0">SUPPRIMER VIGNETTES </button><br>
+                <button (click)="userAddVignette(10)">userVignettes +10 </button>{{stateApp['userVignettes']}}<br>
+
+            </div>
+        </div>
+        <div class="col-6 d-block">
+            <div class="bg-light" *ngIf="switchOption==true">
+                <button (click)="userAddVignette(-10)">userVignettes -10 </button>{{stateApp['userVignettes']}}
+                <br> operation > {{stateApp['operation']}}
+                <br><button (click)="changeOperationState('coming')">coming</button>
+                <br><button (click)="changeOperationState('open')">open</button>
+                <br><button (click)="changeOperationState('closed')">closed</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal bottom fade" id="digitalisationModal" tabindex="-1" role="dialog"
+    aria-labelledby="addProdutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog" role="document">
+        <div class="modal-content reductionModalWidth">
+            <div class="modal-header text-center  border-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-0 text-center">
+                <h4 class="font-weight-light pt-4 pb-4">
+                    Vous participez maintenant<br> à l'opération dématérialisée
+                </h4>
+                <div class="txtBox text-center p-2 blueTxt">
+                    <b>Retrouvez vos 2 vignettes sur votre <br> collecteur unique</b>
+                </div>
+            </div>
+
+            <div class="col-12 p-0 ">
+                <div class="iconBox1 m-auto">
+                    <div class="iconBox cadeau"></div>
+                </div>
+            </div>
+
+            <div class="modal-footer row border-0">
+                <div class="col-12 text-center">
+                    <a href="#" (click)="digitaliser()" onclick="$('#digitalisationModal').modal('hide');"
+                        class="btn btn-primary vignetteBtn">
+                        Voir mon collecteur</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal bottom fade" id="addProdutModal" tabindex="-1" role="dialog" aria-labelledby="addProdutModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content reductionModalWidth">
+            <div class="modal-header text-center">
+                <button type="button" class="close" *ngIf="nbrProductSelected>1" data-toggle="modal"
+                    data-target="#addMultipleProdutsModal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <button type="button" class="close" *ngIf="nbrProductSelected<=1" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <h2>
+                    Grâce à votre Carte<br>
+                    E.Leclerc, bénéficiez dès à <br>
+                    présent de votre produit à <br>
+                    prix réduit.
+                </h2>
+                <div class="row productBox">
+                    <div class="col-12 pb-4 produtcTitle text-center">
+                        <span *ngIf="nbrProductSelected>1">
+                            {{nbrProductSelected}} lot<span *ngIf="nbrProductSelected>1">s</span>
+                            {{selectedProduct['Libelle']}}
+                        </span>
+                        <span *ngIf="nbrProductSelected<=1">
+                            {{selectedProduct['Libelle']}}
+                        </span>
+
+                    </div>
+                    <div class="col-6 mt-2">
+                        <div class="circlePrice">
+                            <span class="price">{{selectedProduct['PrixOperation']}}
+                                <span class="euro">€</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-6 p-1">
+                        <img src="{{selectedProduct.UrlPhoto}}" class="img-fluid " />
+                    </div>
+
+                </div>
+                <div class="txtBox text-center p-2">
+                    <b>Vous avez utilisé {{selectedProduct['vignettes']*nbrProductSelected}} vignette<span
+                            *ngIf="stateApp['userVignettes']>1">s</span> sur {{stateApp['userVignettes']}}</b><br>
+                    Récupérez votre produit en magasin et présentez<br>
+                    votre carte de fidélité en caisse, ou commandez<br>
+                    votre produit sur www.leclercdrive.fr ou<br>
+                    www.chezmoi.leclerc
+
+                </div>
+            </div>
+            <div class="modal-footer row">
+                <div class="col-12 text-center">
+                    <a href="./#/avantages" (click)="productValidation()" onclick="$('#addProdutModal').modal('hide')"
+                        class="btn btn-primary vignetteBtn">
+                        Je consulte mes coupons disponibles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="modal bottom fade" id="addMultipleProdutsModal" tabindex="-1" role="dialog"
+    aria-labelledby="addProdutModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content reductionModalWidth">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-plus iconLighter"></i>
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <h2>
+                    <b>Vous avez {{stateApp['userVignettes']}} vignette<span
+                            *ngIf="stateApp['userVignettes']>1">s</span></b><br>
+                    Combien de produits <br>
+                    souhaitez-vous?
+                </h2>
+                <div class="compteur col-6 offset-3 p-0 mt-4 mb-4 text-center">
+                    <div class="row">
+                        <div class="col-4 offset-1 " (click)="selectNbrProducts('moins');">
+                            <i [ngClass]="{'disable':nbrProductSelected==1}" class="fa fa-minus"></i>
+                        </div>
+                        <div class="num col-2">{{nbrProductSelected}}</div>
+                        <div class="col-4" (click)="selectNbrProducts('plus');">
+                            <i [ngClass]="{'disable':nbrProductSelected == nbrProductPossible}" class="fa fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerTxt col-10 offset-1 text-center font-weight-light">
+                    Vous pouvez bénéficier de {{nbrProductPossible}} produits.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="col-12 text-center">
+                    <button type="button" data-toggle="modal" data-target="#addProdutModal"
+                        class="btn btn-primary vignetteBtn" data-dismiss="modal">Je télécharge mon coupon</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

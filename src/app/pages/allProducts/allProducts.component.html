@@ -1,0 +1,58 @@
+<section id="section1" class="container-fluid p-0 mb-2 overflow-hidden">
+    <a href="./#/home" class="row productBox1 overflow-hidden">
+        <div class="col-1 pl-md-5">
+            <i _ngcontent-vcb-c16="" class="fa fa-angle-left fa-1x"></i>
+        </div>
+        <div class="col-11 col-md-10 text-center pl-0">
+            Tous les produits {{appInfos['NomMarque']}}
+        </div>
+    </a>
+    <div class="row productBox pt-5 mt-n2 pb-4">
+    <div *ngFor="let product of appInfos['ProduitsOperation']; index as i"
+        class="col-10 offset-1 col-md-4 offset-md-1 text-left p-0 pb-4 productBoxItem">
+        <ul class="list-group">
+            <li class="list-group-item bodyItem ">
+                <div class="row">
+                    <div class="col-12 pb-4 produtcTitle text-center">
+                        {{product.Libelle}}
+                    </div>
+                    <div class="col-6">
+                        <div class="circlePrice">
+                            <span class="price">{{product.PrixOperation}}
+                                <span class="euro">€</span>
+                            </span>
+                            <span class="infoBox1">+ {{product.NbVignettes}} vignettes</span>
+                        </div>
+                    </div>
+                    <div class="col-6 p-1">
+                        <img src="{{product.UrlPhoto}}" class="img-fluid " />
+                        <div class="picturePrice text-right">Prix Public : {{product.PrixPublic}}€</div>
+                    </div>
+
+                </div>
+            </li>
+            <li class="list-group-item">
+                <span>Description</span>
+                <i (click)="vignettesService.showDescription($event)"
+                    class="fa fa-plus float-right iconLighter"></i>
+                <div style="display: none;" class="productDescription1 font-weight-light pt-2 pb-2">
+                    {{product.Description}}
+                    <div class="productCaracteristiques mt-2">
+                        <ul class="list-unstyled">
+                            <li 
+                            *ngFor="let caract of product.Caracteristiques"
+                            >
+                                - {{caract}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item onlineBtnBox">
+
+            </li>
+        </ul>
+
+    </div>
+</div>
+</section>

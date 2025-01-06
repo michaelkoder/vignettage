@@ -1,0 +1,738 @@
+@use 'sass:math';
+@import "../../../general.scss";
+
+$generalFont1:"Roboto", sans-serif;
+$colorOrange:#FF6633;
+$colorRed:#E7391E;
+$colorGrey:#E7E7E7;
+$colorGreyMiddle:#868686;
+$colorBlack:#0B0B0B;
+$colorBlue:#0066CC;
+$colorBlueLight:#E6F0FA;
+
+
+
+@import "./../../../../node_modules/bootstrap/scss/functions";
+@import "./../../../../node_modules/bootstrap/scss/variables";
+@import "./../../../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+#section1{
+    .sectionBox1{
+        position:relative;
+        z-index: 10;
+    }
+    .homeParentBox1{
+        z-index: 100;
+    }
+    .homeTextBox2{
+        border-bottom-right-radius: 47%;
+        border-bottom-left-radius: 47%;
+        background: white;
+        margin: 0 0 -50px -35vw !important;
+        display: inline-flex;
+        padding: 0 35vw;
+        width: 170vw;
+    }
+    .homeTextBox3{
+        background-color: $colorRed;
+        color:#ffffff; 
+        border-radius: 34%;
+        margin: 0 0 0 -35vw !important;
+        display: block;
+        padding: 0 35vw 25px;
+        width: 170vw;
+        h1{
+            font-weight: 500;
+            font-size: 34px;
+            line-height: 44px;
+            letter-spacing: 0em;
+        }
+        h2{
+            font-size: 23px;
+            font-weight: lighter;
+            line-height: 32px;
+            letter-spacing: 0px;
+        }
+        .text{
+            font-size: 16px;
+            font-weight: lighter;
+        }
+        .seeProducts{
+            width: 100%;
+            border-radius: 20px;
+            color: $colorRed;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        a{
+            font-weight: 300;
+            line-height: 23px;
+            font-size: 16px;
+            color:$colorGrey;
+            text-decoration: underline;
+        }   
+        #compteur{
+            .times{
+                    display: flex;
+                    padding: 0 24px;
+                .numberBox{
+                    display: inline-flex; 
+                    width: 40px;
+                    height: 40px;
+                  span{
+                    font-size: 20px;  
+                    color: #FFFFFF;
+                    position: relative;
+                    font-weight: bold;
+                    left: 20px;
+                    top: 9px;
+                    margin: -4px;
+                  }
+                    .numberBoxBg{
+                        border-radius: 8px;
+                        background-color: #ffffff;
+                        opacity: 0.2;   
+                        display: inline-block;
+                        width: inherit;
+                  }
+              }
+                .points{
+                    color: #FFFFFF;
+                    font-size: 28px;
+                    font-weight: bold;
+                    margin: -3px 0 0 5px;
+                }
+            }
+            
+            .labels{
+                opacity: 0.5;
+                color: #FFFFFF;
+                font-size: 16px;
+                font-weight: 300;
+                margin: 10px 0 0 -4px;
+            }
+        }
+    }
+}
+
+#sectionA{
+    background-color: $colorGrey;
+}
+#desktopStyle{
+    background-color:$colorGrey;
+    margin: -60px 0 0 0;
+    height: 60px;
+    display:none;
+
+}
+#section2{
+    z-index: 0;
+    margin: -40px 0 0 0;
+
+    #vignettesNbrIndicator .contentBox{
+        background-color: $colorBlue;
+        border-radius: 5px;
+        font-size: 14px;
+        color: #FFFFFF;
+        
+        .textBox{
+            margin: -35px 0 5px 0;
+            
+        }
+        .vignettesNbr{
+            position: relative;
+            font-size: 78px;
+            top: 20px;
+            left: 10px;
+        }
+    }
+    .homeBox2{
+        background-color:$colorGrey;
+        color:$colorRed;
+        font-size: 16px;
+        .list-group{
+            border-radius: 6px;
+            .list-group-item{
+                &:first-child{
+                    border-bottom:1px solid rgba(0, 0, 0, 0.125);
+                }
+                &:last-child{
+                    
+                     border:none;
+                }
+            }
+        }
+        .plusDeBox{
+            background-color: $colorRed;
+            border-radius: 5px;
+            display: inline-flex;
+            width: 53px;
+            position: relative;
+            padding: 2px 5px 1px 6px;
+            transform: rotate(-6deg);
+            font-size: 10px;
+            color: #FFFFFF;
+            font-weight: 400;
+            top: -2px;
+        }
+    }
+    .loginBox_out{
+        background-color:$colorGrey;
+        .footer{
+            color: $colorBlue;
+        }
+        .loginBox_in{
+            background-color: $colorBlue;
+            border-radius: 8px;
+            color: #FFFFFF;
+            font-size: 16px;
+            .identTxt{
+                font-size: 20px;
+                font-weight: 500;
+            }
+            .vignetteImg{
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                padding: 10px 5px;
+                background-color: #FFFFFF;
+            }
+            button{
+                width: 100%;
+                border-radius:20px;
+                color: $colorBlue;
+                font-weight: 500;
+            }
+        }
+    }
+    .logedInBox_out{
+        background-color:$colorGrey;
+        .logedInBox_in{
+            background-color: $colorBlue;
+            border-radius: 8px;
+           .txtBox1{
+                font-size: 16px;
+                color: #FFFFFF;
+                font-weight: 500;
+                margin: -20px 0 30px 0;
+                .number{
+                    font-size: 78px;
+                    display:inline-block;
+                    position: relative;
+                    top: 20px;
+                }
+           }
+           .whiteBox{
+               color: $colorBlue;
+               border-radius: 8px;
+               background-color: #FFFFFF;
+               font-size: 14px;
+               padding: 12px;
+               padding-left: 5px;
+               margin-top: 13px;
+               text-align: left;
+                .progressBox{
+                    display: inline-block;
+                    margin: -20px 0;
+                    position: relative;
+                    top: 20px;
+                    background-image: url('../../../assets/image/home/miniVerres.jpg');
+                    background-size: 55px;
+                    background-repeat: no-repeat;
+                    background-position: 20px 16px;
+                    .progress-value{
+                        background-color: $colorBlue;
+                        border-radius: 30px;
+                        color: #FFFFFF;
+                        width: 25px;
+                        height: 25px;
+                        padding: 2px 0px 0 4px;
+                        font-size: 14px;
+                        position: relative;
+                        top: -22px;
+                        left: 55px;
+                    }
+
+                 }
+            
+            
+        
+         }      
+           .whiteBordered{
+               color: #FFFFFF;
+               border: 1px solid #FFFFFF;
+               font-size: 14px;
+               border-radius: 6px;
+               background-color: $colorBlue;
+           }
+        }
+    }
+}
+#section3{
+    .footer{
+        color: $colorBlue;
+    }
+    .homeBox4{
+        background-color:$colorGrey;
+        h2{
+            font-weight: 300;
+            font-size: 24px;
+            color: $colorBlack;
+        }
+        .txtBox{
+            font-weight: 300;
+            font-size: 14px;
+            color:$colorGreyMiddle;
+        }
+    }
+}
+
+#section4{
+    background-color:$colorGrey;
+    .markeVivo{
+        background-color: #FFFFFF;
+    }
+}
+
+$borderWidth: 5px;
+$animationTime: .5s;
+$border-color-default: #efefef;
+$border-color-fill: $colorBlue;
+$size: 90px;
+$howManySteps: 100; //this needs to be even. 
+
+.progress {
+  width: $size;
+  height: $size;
+  line-height: $size;
+  background: none;
+  margin: 0 auto;
+  box-shadow: none;
+  position: relative;
+  transform: rotate(228deg);
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: $borderWidth solid $border-color-default;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  > span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  .progress-left {
+    left: 0;
+  }
+  .progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: $borderWidth;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    border-color: $border-color-fill;
+  }
+  .progress-left .progress-bar {
+    left: 100%;
+    border-top-right-radius:math.div($size, 2);
+    border-bottom-right-radius: math.div($size, 2);
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+    //animation: loading-2 1.5s linear forwards 1.8s;
+  }
+  .progress-right {
+    right: 0;
+    .progress-bar {
+      left: -100%;
+      border-top-left-radius: math.div($size, 2);
+      border-bottom-left-radius:math.div($size, 2);
+      border-right: 0;
+      -webkit-transform-origin: center right;
+      transform-origin: center right;
+      //animation: loading-1 1.8s linear forwards;
+    }
+  }
+}
+
+.endOperationMessageBox{
+    margin: 0 10% 20px;
+    display: flex;
+    padding: 15px 0 8px;
+    .lockIconBox{
+        background-color: #FFFFFF;
+        height: 48px;
+        width: 48px;
+        border-radius: 30px;
+        margin-right: 15px;
+        .lockIcon{
+            background-color: #FFFFFF;
+            margin: 0px auto;
+            height: 48px;
+            width: 48px;
+            -webkit-mask-image: url('./../../../assets/image/interfaces/lock.svg');
+            -webkit-mask-size: 20px;
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: 14px;
+            
+            mask-image: url('./../../../assets/image/interfaces/lock.svg');
+            mask-size: 20px;
+            mask-repeat: no-repeat;
+            mask-position: 14px;
+            &.lockIcon_red{
+                background-color: #ff0000;
+            }
+        }
+    }  
+    .textBox{
+        font-size: 14px;
+        padding: 6px 0 0;
+    }
+  
+
+}
+
+
+.sliderBox{
+    background: $colorGrey;
+    h2{
+        font-size: 24px;
+        font-weight: 300;
+    }
+    .carousel-indicators li{
+        list-style-type: none;
+        height: 10px;
+        width: 10px;
+        margin: 5px;
+        background-color: #ffffff;
+        border: 1px solid $colorBlue;
+        border-radius: 50%;
+        display: inline-block;
+        &.active{
+            background-color: blue;
+            height: 15px;
+            width: 15px;
+            position: relative;
+            top: -2px;
+        }
+    }
+    .carousel-item{
+        .carousel-item-box{
+
+            border: none;
+            min-width: 100%;
+            height: 250px;
+        }
+        .slideIconBox{
+            background-color: $colorBlue;
+            border-radius: 40px;    
+            height: 64px;
+            width: 64px;
+            display: inline-block;
+            .sliderIcon{
+                mask-size: 24px;
+                mask-repeat: no-repeat;
+                mask-position: 20px 17px;
+                background-color: #FFFFFF;
+                height: 64px;
+                width: 64px;
+                &.cadeau{
+                    mask-image: url('./../../../assets/image/interfaces/cadeau.svg');
+                    
+                }
+                &.cumulVignettes{
+                    mask-image: url('./../../../assets/image/interfaces/cumulVignettes.svg');
+                    mask-size: 30px;   
+                    mask-position: 18px 17px;     
+                }
+            }
+
+        }
+        
+        h3{
+            color: $colorBlue;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .txt{
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+    
+}
+.howItWork{
+    background-color: $colorBlue;
+    h2{
+       font-size: 24px; 
+       font-weight: 300;
+       color: #FFFFFF;
+    }
+    .footer{
+        font-size: 14px;
+        font-weight: lighter;
+    }
+    .howItWorkBlock{
+        border-radius: 5px;
+        background-color: #FFFFFF;
+        width: 100%;
+        .number{
+             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);    
+             width: 40px;
+             height: 40px;
+             border-radius: 40px;
+             margin: 0 auto;
+             padding-top: 5px;
+             position: relative;
+             top: -21px;
+             background-color: #FFFFFF;
+             color: $colorBlue;
+             font-weight: 500;
+             font-size: 20px;
+        }
+        &.block1{
+            margin-right: 2%;
+            width: 48%;
+        }
+        &.block2{
+            margin-left: 2%;
+            width: 48%;
+        }
+        .text{
+            padding: 0px 5px 40px;
+            font-size: 15px;
+            b{
+                color: $colorBlue;
+            }
+        }
+    }
+}
+.markeVivo{
+    .markeVivoBox{
+        background-color: #FFFFFF;
+        .visuelMark1{
+            margin-top: 15px;
+        }
+        .row{                             
+            overflow: hidden;
+            border-radius: 10px;
+        }
+    }
+    h2{
+        font-size: 24px;
+        font-weight: 300;
+    }
+    .text{
+        font-size: 15px;
+    }
+}
+.linksBox{
+    background-color: $colorGrey ;
+    .linkItem{
+        color: $colorBlack;
+        border-radius: 5px;
+        background-color: #FFFFFF;
+        font-size: 16px;
+        padding: 15px 0 7px;  
+        width: 102%;
+        margin: 11px 0 19px -1%;
+        display: flex;
+        i{
+           position: relative;
+           top: -5px; 
+        }
+    }
+}
+
+/* This for loop creates the necessary css animation names 
+Due to the split circle of progress-left and progress right, we must use the animations on each side. 
+*/
+@for $i from 1 through $howManySteps {
+	$stepName: ($i* math.div(100, $howManySteps));
+
+	//animation only the left side if below 50%
+	@if $i <= math.div($howManySteps,2) { 
+		.progress[data-percentage="#{$stepName}"] {
+			.progress-right .progress-bar {
+				 animation: loading-#{$i} $animationTime linear forwards;
+			}
+			.progress-left .progress-bar {animation: 0;}
+		}
+	}
+	//animation only the right side if above 50%
+	@if $i > math.div($howManySteps,2)  {  
+		.progress[data-percentage="#{$stepName}"] {
+			.progress-right .progress-bar {
+				animation: loading-#{math.div($howManySteps,2)} $animationTime linear forwards; //set the animation to longest animation
+			}
+			.progress-left .progress-bar {
+      animation: loading-#{$i - math.div($howManySteps,2)} $animationTime linear forwards $animationTime;
+    }
+		}
+	}
+}
+
+//animation
+@for $i from 1 through math.div($howManySteps,2) { 
+	$degrees: math.div(180,math.div($howManySteps,2));
+	$degrees: ($degrees*$i);
+	@keyframes loading-#{$i}{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate($degrees);
+			transform: rotate(#{$degrees}deg);
+        }
+	}
+}
+.carousel-control-prev, .carousel-control-next{
+    color:$colorBlue;
+}
+.modal-dialog.modal-dialog{
+    width:100%;
+    margin:0;
+}
+
+.reductionModalWidth{
+    width: 90%;
+    margin: 0 0 0 5%;
+}
+@include media-breakpoint-up(sm) {
+
+
+    .modal-dialog.modal-dialog{
+        width: 50%;
+        margin: 0 25% 10vh;
+    }
+    #section1{
+        height: 288px;
+            
+        .sectionBox1{
+            max-width: 200%;
+            min-width: 152%;
+            border-bottom-left-radius: 33%;
+            border-bottom-right-radius: 33%;
+            background: white;
+            margin: 0px -26% 120px;
+            padding: 0 30% !important;
+            overflow: hidden;
+            height: 288px;
+        }
+        .homeParentBox1{
+            .homeTextBox2{
+                border-radius: unset;
+                margin: unset !important;
+                padding: unset;
+                width: unset;
+                .imgBox{
+                    position: relative;
+                    top: 23%;
+                }
+            }
+        }
+        .homeParentBox2{
+            .homeTextBox3{
+                margin: -210px 10% -120px -6% !important;
+                padding: 161px 0 70px 0px;
+                width: unset;
+                max-height: 718px;
+                border-radius: 65%;
+                min-height: 700px;
+                h1{
+                    font-size: 20px;
+                }
+                h2{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    #desktopStyle{
+        display: block;
+    }
+    #section2{
+        margin: -55px 0 0 0;
+        float: left;
+        z-index: 1000;
+    }
+    #section3{
+        background-color: #E7E7E7;
+        .productBox{
+            .productBoxItem{
+                display:block;
+            }
+            width: 100%;
+        }
+        .homeBox4{
+
+            width: 100%;
+        }
+        .carousel-item{
+            .carousel-item-box{
+                min-width: 50%;
+            }
+        }
+    }
+    
+    
+    #section4{
+        background-color: #E7E7E7;
+        .howItWorkBlock{
+            &.block1, &.block2 , &.block3{
+                width:31%;
+                height: 130px;
+            }
+            &.block3{
+                margin: 0 0 0 3%;
+                position: relative;
+                top: 23px;
+                height: 130px;
+            }
+            &.block1.block4, &.block2.block5 {
+                width:48%;
+            }
+            .text{
+                padding: 0px 5px 20px;
+            }
+        }
+        .markeVivo{
+            background-color: $colorGrey;
+            .markeVivoBox{
+                border-radius: 10px;
+                .visuelMark1{
+                    margin-top: 128px;
+                }
+            }
+        }
+
+    }
+    .linksBox{
+        background-color: $colorGrey ;
+        .linkItem{
+            width: 100%;
+            margin: 0 5%;
+        }
+    }
+
+        
+.endOperationMessageBox{
+    margin: -10px 10% 20px;
+    display: flex;
+    padding: 5px 0 8px;
+}
+    
+}
+
+
+

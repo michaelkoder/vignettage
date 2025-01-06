@@ -1,0 +1,260 @@
+{
+    "CR": 0,
+    "DONNEES": {
+        "TitrePresentationMarque": "La marque VIVO",
+        "TextePresentationMarque": "groupe Villeroy & Boch est une marque associée \r\nde Villeroy & Boch AG, fondée en 1748. Depuis \r\nses débuts, la collection vivo s'inscrit dans la \r\ntradition de fabrication d'accessoires pour la \r\ncuisine de Villeroy & Boch.",
+        "NomMarque": "VIVO",
+        "NomOperation": "Opération Vivo",
+        "DateFinCollecteVignettes": "2021-04-03T23:59:59Z",
+        "EtatClient": 0,
+        "NbVignettesBasculeDigital": 2,
+        "NbVignettesAchat": 1,
+        "MontantMinCollecteVignettes": "10,00",
+        "NbVignettesDisponibles": 0,
+        "DetailOperation": {
+            "Mode": 0,
+            "Description": "Des verres à prix choc en collectionnant des vignettes",
+            "DateDebut": "2021-01-27T00:00:00Z",
+            "DateFin": "2021-03-03T23:59:59Z",
+            "TitreBloc": "Tous les produits Vivo",
+            "TexteBloc": "Obtenez vos produits VIVO à prix réduits du 27/01/2021 au 23/03/2021 en collectionnant vos vignettes puis en téléchargeant vos avantages sur votre Carte E.Leclerc"
+        },
+        "NbCouponsReserves": 3,
+        "Coupons": [
+            {
+                "GuidCoupon": "640abd44-7efe-4c60-bd4b-9522b38341d1",
+                "EAN": "0000087654323",
+                "DateReservation": "2020-12-05T12:30:00Z",
+                "EstUtilise": false
+            },
+            {
+                "GuidCoupon": "59a25acd-a76e-438a-9eff-c5a8dd95d8aa",
+                "EAN": "0000087654322",
+                "DateReservation": "2020-12-03T15:30:00Z",
+                "EstUtilise": true,
+                "DateUtilisation": "2020-12-04T17:15:00Z"
+            },
+            {
+                "GuidCoupon": "59a25acd-a76e-438a-9eff-c5a8dd95d8aa",
+                "EAN": "0000087654324",
+                "DateReservation": "2020-12-03T15:30:00Z",
+                "EstUtilise": true,
+                "DateUtilisation": "2020-12-04T17:15:00Z"
+            }
+        ],
+        "ProduitsOperation": [
+            {
+                "EAN": "0000087654322",
+                "Libelle": "Lot de 2 verres à vin blanc",
+                "EstDisponible": true,
+                "Caracteristiques": [
+                    "En verre cristallin",
+                    "Ne convient pas au lave vaisselle"
+                ],
+                "PrixPublic": "18,80",
+                "PrixOperation": "7",
+                "NbVignettes": 10,
+                "Description": "Des verres raffinés qui se caractérisent par leur élégance discrète et qui grâce à leur forme arrondie , permettent le développement optimal des arômes délicats .",
+                "UrlPhoto": "https://photos-emailing.leclercdrive.fr/image.ashx?id=780013&use=l&cat=p&typeid=i",
+                "NbReservationPossible": 2
+            },
+            {
+                "EAN": "0000087654323",
+                "Libelle": "Lot de 2 verres à eau",
+                "EstDisponible": true,
+                "Caracteristiques": [
+                    "En verre cristallin",
+                    "Ne convient pas au lave vaisselle"
+                ],
+                "PrixPublic": "20,00",
+                "PrixOperation": "9",
+                "NbVignettes": 25,
+                "Description": "Des verres parfaits aussi bien pour le quotidien que pour les occasions spéciales",
+                "UrlPhoto": "https://photos-emailing.leclercdrive.fr/image.ashx?id=1061500&use=l&cat=p&typeid=i",
+                "NbReservationPossible": 2
+            },
+            {
+                "EAN": "0000087654324",
+                "Libelle": "Lot de 2 verres à whisky",
+                "EstDisponible": true,
+                "Caracteristiques": [
+                    "En verre cristallin",
+                    "Ne convient pas au lave vaisselle"
+                ],
+                "PrixPublic": "15,70",
+                "PrixOperation": "9",
+                "NbVignettes": 25,
+                "Description": "Des verres parfaits aussi bien pour le quotidien que pour les occasions spéciales",
+                "UrlPhoto": "https://photos-emailing.leclercdrive.fr/image.ashx?id=1419622&use=l&cat=p&typeid=i",
+                "NbReservationPossible": 2
+            },
+            {
+                "EAN": "0000087654325",
+                "Libelle": "Lot de 2 flûtes à champagne",
+                "EstDisponible": true,
+                "Caracteristiques": [
+                    "En verre cristallin",
+                    "Ne convient pas au lave vaisselle"
+                ],
+                "PrixPublic": "20,90",
+                "PrixOperation": "1",
+                "NbVignettes": 40,
+                "Description": "Avec ces flûtes à champagne au design classique mais raffiné, servez vos invités avec style en toute occasion",
+                "UrlPhoto": "https://photos-emailing.leclercdrive.fr/image.ashx?id=780017&use=l&cat=p&typeid=i",
+                "NbReservationPossible": 2
+            },
+            {
+                "EAN": "0000087654326",
+                "Libelle": "Lot de 2 verres à vin rouge",
+                "EstDisponible": true,
+                "Caracteristiques": [
+                    "En verre cristallin",
+                    "Ne convient pas au lave vaisselle"
+                ],
+                "PrixPublic": "25,00",
+                "PrixOperation": "5",
+                "NbVignettes": 10,
+                "Description": "Des verres raffinés qui se caractérisent par leur élégance discrète et qui grâce à leur forme arrondie , permettent le développement optimal des arômes délicats .",
+                "UrlPhoto": "https://photos-emailing.leclercdrive.fr/image.ashx?id=780013&use=l&cat=p&typeid=i",
+                "NbReservationPossible": 2
+            }
+        ],
+        "DeclencheursActuels": {
+            "Description": "Du 26/01/21 00:00:00 au 05/02/21 00:00:00 selon disponibilité en magasin",
+            "Produits": [
+                {
+                    "Libelle": "Haricots verts Notre Jardin",
+                    "Rayon": 1,
+                    "UrlPhoto": "https://photos-emailing.leclercdrive.fr/image.ashx?id=1208697&use=l&cat=p&typeid=i"
+                },
+                {
+                    "Libelle": "Flageolets verts Bonduelle",
+                    "Rayon": 1,
+                    "UrlPhoto": "https://photos-emailing.leclercdrive.fr/image.ashx?id=1208697&use=l&cat=p&typeid=i"
+                },
+                {
+                    "Libelle": "Pâtes Fusilli  Barilla",
+                    "Rayon": 2,
+                    "UrlPhoto": "https://photos-emailing.leclercdrive.fr/image.ashx?id=1208697&use=l&cat=p&typeid=i"
+                },
+                {
+                    "Libelle": "Biscuits P'tit Déli Cookies",
+                    "Rayon": 3,
+                    "UrlPhoto": "https://photos-emailing.leclercdrive.fr/image.ashx?id=1452682&use=l&cat=p&typeid=i"
+                },
+                {
+                    "Libelle": "Biscuits Lu Bastogne",
+                    "Rayon": 3,
+                    "UrlPhoto": "https://photos-emailing.leclercdrive.fr/image.ashx?id=1452682&use=l&cat=p&typeid=i"
+                },
+                {
+                    "Libelle": "Génoises fourrées P'tit Déli",
+                    "Rayon": 3,
+                    "UrlPhoto": "https://photos-emailing.leclercdrive.fr/image.ashx?id=1546838&use=l&cat=p&typeid=i"
+                },
+                {
+                    "Libelle": "Biscuits Coqueline Lu",
+                    "Rayon": 3,
+                    "UrlPhoto": "https://photos-emailing.leclercdrive.fr/image.ashx?id=1452682&use=l&cat=p&typeid=i"
+                }
+            ]
+        },
+        "DeclencheursFuturs": {
+            "Description": "Du 26/01/21 00:00:00 au 01/03/21 00:00:00 selon disponibilité en magasin",
+            "Produits": [
+                {
+                    "Libelle": "Pois chiches Notre Jardin",
+                    "Rayon": 1,
+                    "UrlPhoto": "https://photos-emailing.leclercdrive.fr/image.ashx?id=727008&use=l&cat=p&typeid=i"
+                },
+                {
+                    "Libelle": "Filets sardines Pêche Océan",
+                    "Rayon": 1,
+                    "UrlPhoto": "https://photos-emailing.leclercdrive.fr/image.ashx?id=1188282&use=l&cat=p&typeid=i"
+                },
+                {
+                    "Libelle": "Pâtes Panzani vermicelles",
+                    "Rayon": 2,
+                    "UrlPhoto": "https://photos-emailing.leclercdrive.fr/image.ashx?id=1208697&use=l&cat=p&typeid=i"
+                },
+                {
+                    "Libelle": "Biscuits Petits Coeurs Lu",
+                    "Rayon": 3,
+                    "UrlPhoto": "https://photos-emailing.leclercdrive.fr/image.ashx?id=1452682&use=l&cat=p&typeid=i"
+                }
+            ]
+        },
+        "Rayons": [
+            {
+                "IdRayon": 1,
+                "Libelle": "Conserves"
+            },
+            {
+                "IdRayon": 2,
+                "Libelle": "Pâtes/Riz"
+            },
+            {
+                "IdRayon": 3,
+                "Libelle": "Gâteaux"
+            }
+        ],
+        "Magasins": [
+            {
+                "NomMagasin": "Roques",
+                "Adresse": "3 allée de Fraixinet",
+                "CodePostal": "31120 Roques-sur-Garonne",
+                "NoTelephone": "05.61.72.72.09",
+                "TypeMagasin": 1,
+                "Departement": 1
+            },
+            {
+                "NomMagasin": "Roques",
+                "Adresse": "3 allée de Fraixinet ",
+                "CodePostal": "31120 Roques-sur-Garonne",
+                "NoTelephone": "05.61.72.72.09",
+                "TypeMagasin": 2,
+                "Departement": 1
+            },
+            {
+                "NomMagasin": "Paris 15",
+                "Adresse": "68 Boulevard de Grenelle",
+                "CodePostal": "75015 Paris",
+                "NoTelephone": "01.86.33.02.10",
+                "TypeMagasin": 3,
+                "Departement": 2
+            },
+            {
+                "NomMagasin": "Saint Orens",
+                "Adresse": "Route De Revel Rocade Est Sortie 18",
+                "CodePostal": "31650 Saint Orens De Gameville",
+                "NoTelephone": "05.61.17.17.17",
+                "TypeMagasin": 1,
+                "Departement": 1
+            }
+        ],
+        "Departements": [
+            {
+                "NoDepartement": 1,
+                "NomDepartement": "31 - Ain"
+            },
+            {
+                "NoDepartement": 2,
+                "NomDepartement": "75 - Aisne"
+            }
+        ],
+        "PointDeVentes": [
+            {
+                "NoPointDeVente": 1,
+                "LibellePointDeVente": "Magasin"
+            },
+            {
+                "NoPointDeVente": 2,
+                "LibellePointDeVente": "Drive"
+            },
+            {
+                "NoPointDeVente": 3,
+                "LibellePointDeVente": "E.Leclerc chez moi"
+            }
+        ]
+    }
+}

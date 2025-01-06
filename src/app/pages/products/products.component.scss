@@ -1,0 +1,134 @@
+@import "../../../general.scss";
+
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
+#section1{
+    .productBox1{
+        background-color:$colorRed;
+        color:#FFFFFF;
+        font-weight: lighter;
+        font-size: 24px;
+        border-radius: 69%;
+        margin: -24px 0 0 -35vw !important;
+        padding: 36px 35vw 20px;
+        width: 170vw;
+        .fa{
+            font-size: 34px;
+        }
+    }
+    .productBox2{
+        .txt1{
+            font-weight: 500;
+            font-size: 20px;
+        }
+        .txt2{
+            font-size: 16px;
+        }
+    }
+    .productBox3{
+        background-color: $colorGrey;
+        .removeFilter{
+            
+        }
+        .removeFilter i{
+            border-radius: 20px;
+            background-color: $colorRed;
+            color: #FFFFFF;
+            transform: rotate(45deg);
+            font-size: 15px;
+            height: 20px;
+            width: 20px;
+            position: relative;
+            padding: 3px 0 0 4px;
+            top: -7px;
+            right: 2px;
+            margin: 0 0 -20px 0;
+        }
+        h2{
+            font-weight: 300;
+            font-size: 24px;
+        }
+        .txt1{
+            color: $colorGreyMiddle;
+            font-size: 14px;
+        }
+        button{
+            border-radius: 56px;
+            background-color:$colorBlue;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: normal;
+            span{
+                background-color: #FFFFFF;
+                border-radius: 40px;
+                height: 20px;
+                width: 20px;
+                color: $colorBlue;
+                display: inline-block;
+                padding: 4x 0 0 0;
+                margin: 0 0px 0px 2px;
+                font-size: 13px;
+                position: relative;
+                top: -1px;
+                line-height: 20px;
+            }
+        }
+    }
+    
+    .productsList{
+        background-color: $colorGrey;
+        .productBox{
+            padding: 0;
+            .productBoxB{
+                border-radius: 8px;
+                background-color: #FFFFFF;
+                padding: 0 20px;
+                min-height: 250px;
+                &.disabled{ 
+                    filter: grayscale(0%) brightness(100%) contrast(60%) opacity(0.7);
+                }
+            }
+            .txt{
+                font-size: 14px;
+                color: $colorBlack;
+            }
+        }
+        .seeMoreBtn{
+            border: 1px solid $colorBlue;
+            border-radius: 53px;
+            color: $colorBlue;
+        }
+    }
+}
+
+.modal-header .close span{
+    font-size: 40px;
+}
+
+
+
+@include media-breakpoint-up(sm) {
+
+
+    #section1{
+        
+        .productBox3{
+            .removeFilter i{
+                padding: 3px 4px 0 4px;
+                top: -10px;
+                right: -5px;
+            }
+        }
+        .productsList{
+            background-color: $colorGrey;
+            .productBox{
+                padding: 0 10px;
+            }
+        }
+    }
+
+}

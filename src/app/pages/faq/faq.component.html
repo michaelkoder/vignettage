@@ -1,0 +1,87 @@
+<section id="section1" class="container-fluid p-0 mb-2 overflow-hidden">
+    <a href="./#/home" class="row faqBox1 overflow-hidden">
+        <div class="col-1 pl-md-5">
+            <i class="fa fa-angle-left fa-1x"></i>
+        </div>
+        <div class="col-11 col-md-10 text-center pt-1 pl-0">
+          Foire aux questions 
+        </div>
+    </a>
+    <div class="col-12 mt-4 searchBar float-md-right col-md-6 p-md-0 mr-md-4 pt-md-4 pl-md-5 pr-md-5">
+        <div class="input-group mb-4">
+            <input type="search" placeholder="Rechercher une question"  (keyup)="searchFaq($event)"  aria-describedby="button-addon5" class="form-control">
+            <div class="input-group-append">
+              <button id="button-addon5" type="button" (click)="searchFaq($event)" class="btn btn-primary"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="row faqBox2 text-center pr-0 pl-4 col-md-6 float-md-left">
+        <h2 class="text-left col-12 font-weight-light pt-md-4">
+            Questions les plus fréquentes
+        </h2>
+        <div class="col-12">
+            <div class="accordion" id="accordion">
+                <div 
+                *ngFor="let question of faqListFiltered; let i= index"
+                class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link p-0 collapsed row d-inline-flex" type="button" 
+                      data-toggle="collapse" [attr.data-target]="'#collapse'+i"
+                      (click)="openFaq($event)"
+                      aria-expanded="false" aria-controls="collapseOne">
+                        <div class="questionTxt">{{question['question']}}</div>
+                        <div class="btnBox">
+                          <i class="fa fa-plus text-right iconLighter2"></i>
+                          <i class="fa fa-minus text-right iconLighter2"></i>
+                        </div>
+                      </button>
+                    </h2>
+                  </div>
+                  <div [attr.id]="'collapse'+i" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body pt-0">
+                      {{question['answer']}}  
+                    </div>
+                  </div>
+                </div>
+
+
+                  
+              </div>
+            </div>
+    </div>
+    <div class="row faqBox2 faqBox3 text-center pl-2 pr-0 mb-4 m-0 pr-3 col-md-6 mb-md-0 pm-md-4 ">
+        <h2 class="text-left col-12 font-weight-light pt-3 pl-4">
+            Toutes les questions
+        </h2>
+        <div class="col-12 mb-md-4 p-md-0">
+            <div class="accordion" id="accordion">
+                <div 
+                *ngFor="let question of faqListFiltered; let i= index"
+                class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link p-0 collapsed row d-inline-flex" type="button" 
+                      (click)="openFaqB($event)"
+                      data-toggle="collapse" [attr.data-target]="'#collapseB'+i" 
+                      aria-expanded="false" aria-controls="collapseOne">
+                        <div class="questionTxt">{{question['question']}}</div>
+                        <div class="btnBox">
+                          <i class="fa fa-plus text-right iconLighter2"></i>
+                          <i class="fa fa-minus text-right iconLighter2"></i>
+                        </div>
+                      </button>
+                    </h2>
+                  </div>
+                  <div [attr.id]="'collapseB'+i"  class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body pt-0">
+                      {{question['answer']}}
+                    </div>
+                  </div>
+                </div>
+
+                  
+              </div>
+            </div>
+    </div>
+</section>

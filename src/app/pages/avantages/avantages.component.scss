@@ -1,0 +1,124 @@
+@import "../../../general.scss";
+
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
+$generalFont1:"Roboto", sans-serif;
+$colorOrange:#FF6633;
+$colorRed:#E7391E;
+$colorGrey:#E7E7E7;
+$colorGreyMiddle:#868686;
+$colorBlack:#0B0B0B;
+$colorBlue:#0066CC;
+$colorBlueLight:#E6F0FA;
+
+
+#section1{
+    
+    .avantagesBox1{
+        background-color:$colorBlue;
+        color:#FFFFFF;
+        font-weight: lighter;
+        font-size: 24px;
+        border-radius: 69%;
+        margin: -24px 0 0 -35vw !important;
+        padding: 36px 35vw 20px;
+        width: 170vw;
+        .fa{
+            font-size: 34px;
+        }
+    }
+    .avantagesBox2{
+        .txt1{
+            font-weight: 500;
+            font-size: 20px;
+        }
+        .txt2{
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+    .avantagesBox3{
+        background-color:$colorGrey;
+        h2{
+            font-weight: 300;
+            font-size: 24px;
+            color: $colorBlack;
+        }
+    }
+    .productBox{
+         .productItem{
+             background:none;
+             padding: 0;  
+             .list-group{
+                 background:#FFFFFF;
+             }
+         }
+         .itemBody{
+             min-height: 262px;
+         }
+        .disabled{ 
+            filter: opacity(0.6);
+        }
+        .avantageDate{
+            font-size: 14px;
+            color: $colorBlack;
+            font-weight: 500;
+        }
+        .circlePrice .price{
+            top: 14px;
+            left: -29px;
+        }
+        .onlineInfoBox{
+            .imgBox{
+                position: relative;
+                right: -5px;
+            }
+            img{
+                position:relative;
+                top: 3px;
+            }
+            b{
+                color: #000000;
+                font-size: 14px;
+            }
+        }
+    }
+}
+#avantageConfirm{
+    .slideIconBox{
+        background-color: $colorBlue;
+        border-radius: 40px;    
+        height: 64px;
+        width: 64px;
+        display: inline-block;
+        .sliderIcon{
+            mask-size: 42px;
+            mask-repeat: no-repeat;
+            mask-position:10px 10px;
+            background-color: #FFFFFF;
+            height: 64px;
+            width: 64px;
+            &.supprimer{
+                mask-image: url('./../../../assets/image/interfaces/supprimer.svg');
+                
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+
+#section1{
+        .productBox{
+            .productItem{
+                padding: 0 10px 20px;
+            }
+        }
+    }
+    .productBox .list-group .productBoxBody2{
+        min-height: 270px;
+    }
+}

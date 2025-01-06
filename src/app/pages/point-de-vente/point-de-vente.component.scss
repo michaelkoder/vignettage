@@ -1,0 +1,67 @@
+@import '../../../general.scss';
+
+input[type="radio"], input[type="checkbox"] {
+    z-index: 1000;
+}
+#section1{
+    height: 100vh;
+    background-color: $colorGreyLight;
+    .ventesBox1{
+        background-color:$colorBlue;
+        color:#FFFFFF;
+        font-weight: lighter;
+        font-size: 24px;
+        border-radius: 69%;
+        margin: -24px 0 0 -35vw !important;
+        padding: 36px 35vw 20px;
+        width: 170vw;
+        z-index: 60;
+        display: inline-flex;
+        .fa{
+            font-size: 34px;
+        }
+    }
+    .ventesBox2{
+        margin: -10px 0 0 0;
+        z-index: 0;
+        .txt1{
+            font-weight: 300;
+            font-size: 24px;
+        }
+        .txt2{
+            font-size: 16px;
+        }
+        button{
+            border-radius: 56px;
+            background-color: $colorBlue;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        .pointVenteItem{
+            border-radius: 8px;
+            background-color: #FFFFFF;
+            padding: 15px;
+            font-weight: 300;
+            margin-top: 20px;
+            .title1{
+                color: $colorBlue;
+                font-weight: 500;
+            }
+            b{
+                font-weight: 500;
+            }
+            .phone{
+                color: $colorGreyMiddle;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+#filtresPointsVenteModal{
+
+    h2{
+        font-size:28px
+    }
+}
